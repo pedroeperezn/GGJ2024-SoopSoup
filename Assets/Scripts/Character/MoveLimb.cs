@@ -8,6 +8,7 @@ public class MoveLimb : MonoBehaviour
 {
     private Rigidbody2D _rb;
     private SpringJoint2D _spring;
+    private float _radius = 1.5f;
 
     private void Awake()
     {
@@ -17,6 +18,7 @@ public class MoveLimb : MonoBehaviour
  
     public void MoveInDirection(Vector2 targetInWorldSpace, float strength)
     {
+        _rb.bodyType = RigidbodyType2D.Dynamic;
         _spring.enabled = true;
         _spring.connectedAnchor = targetInWorldSpace;
 
@@ -24,7 +26,12 @@ public class MoveLimb : MonoBehaviour
 
     public void Stick()
     {
+        //disable the spring and check to see if we're near a stickable surface, if we are freeze the rb else just flop
         _spring.enabled = false;
-        //TODO: stick to a surface, probally check an overlap sphere and then freeze constraints or maybe something else
+        Collider2D[] objectNear = Physics2D.OverlapCircleAll(transform.position, _radius, LayerMask.GetMask("Ground"));
+        if (objectNear.Length > 0)
+        {
+            _rb.bodyType = RigidbodyType2D.Static;
+        }
     }
 }
