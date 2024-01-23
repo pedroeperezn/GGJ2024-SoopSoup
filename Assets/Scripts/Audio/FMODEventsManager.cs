@@ -1,18 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class FMODEventsManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static FMODEventsManager Instance { get; private set; }
+
+    [field: Header("Llama test SFX")]
+    [field: SerializeField] public EventReference LlamaTest { get; private set; }
+
+    private void Awake()
     {
-        
+        if (Instance != null)
+        {
+            Debug.Log("There's more than one audio manager");
+        }
+
+        Instance = this;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
