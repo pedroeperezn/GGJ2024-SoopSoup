@@ -3,21 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(SpringJoint2D))]
 public class MoveLimb : MonoBehaviour
 {
     private Rigidbody2D _rb;
-    internal float Strength = 1000000;
+    private SpringJoint2D _spring;
 
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
+        _spring = GetComponent<SpringJoint2D>();
     }
  
-    public void MoveInDirection(Vector2 targetInWorldSpace)
+    public void MoveInDirection(Vector2 targetInWorldSpace, float strength)
     {
-        Vector2 targetDirection = (targetInWorldSpace - (Vector2)transform.position).normalized;
+        _spring.enabled = true;
+        _spring.connectedAnchor = targetInWorldSpace;
 
-        Debug.Log(targetDirection);
-        _rb.AddForce(targetDirection * Strength * Time.deltaTime);
+    }
+
+    public void Stick()
+    {
+        _spring.enabled = false;
+        //TODO: stick to a surface, probally check an overlap sphere and then freeze constraints or maybe something else
     }
 }

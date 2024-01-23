@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2160.847, g: 2265.0881, b: 3288.399, a: 1}
+  m_IndirectSpecularColor: {r: 2161.384, g: 2265.387, b: 3288.516, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -533,7 +533,7 @@ GameObject:
   - component: {fileID: 990875711}
   - component: {fileID: 990875715}
   m_Layer: 0
-  m_Name: TestLimbOne
+  m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -550,11 +550,11 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 1
-  m_Mass: 7.5069995
+  m_UseAutoMass: 0
+  m_Mass: 200
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 5
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -565,7 +565,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 0
 --- !u!212 &990875712
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -751,6 +751,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c3909797103d734cbbff00093cb5ebb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _strength: 10000
   _limbs:
   - {fileID: 1429253857}
 --- !u!4 &1411086741
@@ -784,6 +785,7 @@ GameObject:
   - component: {fileID: 1429253853}
   - component: {fileID: 1429253852}
   - component: {fileID: 1429253857}
+  - component: {fileID: 1429253858}
   m_Layer: 0
   m_Name: TestLimbTwo
   m_TagString: Untagged
@@ -967,6 +969,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5be8e6e6ce2c8b9498d62e15aa149a73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!231 &1429253858
+SpringJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1429253851}
+  m_Enabled: 0
+  serializedVersion: 4
+  m_EnableCollision: 1
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_BreakAction: 3
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 1, y: 1}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_AutoConfigureDistance: 0
+  m_Distance: 0.005
+  m_DampingRatio: 1
+  m_Frequency: 1
 --- !u!1 &1823688464
 GameObject:
   m_ObjectHideFlags: 0
@@ -1021,7 +1044,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.690508
+  orthographic size: 11.77
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1046,7 +1069,7 @@ Transform:
   m_GameObject: {fileID: 1823688464}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 5.34, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

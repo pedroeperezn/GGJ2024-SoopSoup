@@ -6,92 +6,46 @@
             "id": "58aa2a6b-799f-4b68-a77a-ce09d78a0189",
             "actions": [
                 {
-                    "name": "Movement",
-                    "type": "Value",
-                    "id": "c6b37550-ace3-49cc-9c16-674f73c623e6",
-                    "expectedControlType": "Vector3",
+                    "name": "LeftRearLegDown",
+                    "type": "Button",
+                    "id": "1c6d919b-2afe-4e0d-a407-1064b7f3619d",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "LeftRearLegUp",
+                    "type": "Button",
+                    "id": "64e02c67-619f-497e-a5dd-4f0f66a5e8d7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
                 {
-                    "name": "3D Vector",
-                    "id": "50a80417-0018-41a6-8221-bc05948f59e1",
-                    "path": "3DVector",
-                    "interactions": "",
+                    "name": "",
+                    "id": "029b273d-78cf-4c3f-8890-6c1dc89eacf4",
+                    "path": "<Keyboard>/q",
+                    "interactions": "Press",
                     "processors": "",
                     "groups": "",
-                    "action": "Movement",
-                    "isComposite": true,
+                    "action": "LeftRearLegDown",
+                    "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "up",
-                    "id": "e0914dc8-2281-4629-bfd5-99e08edf16db",
+                    "name": "",
+                    "id": "8d2ffb8e-dbb9-4cc9-bd29-a5498487a219",
                     "path": "<Keyboard>/q",
-                    "interactions": "",
+                    "interactions": "Press(behavior=1)",
                     "processors": "",
                     "groups": "",
-                    "action": "Movement",
+                    "action": "LeftRearLegUp",
                     "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "down",
-                    "id": "db7cc8e8-b470-4edb-925f-9753ac8e5600",
-                    "path": "<Keyboard>/w",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "left",
-                    "id": "caf41450-51b5-49b8-b47d-54d6754143e1",
-                    "path": "<Keyboard>/e",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "right",
-                    "id": "bff9d224-b262-49f0-8e7e-65572be7d518",
-                    "path": "<Keyboard>/r",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "forward",
-                    "id": "aef5c413-885f-4995-8cd2-eff97c7e5297",
-                    "path": "<Keyboard>/shift",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "backward",
-                    "id": "02ce3011-2794-4e94-afb2-2f754b389b2b",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": true
+                    "isPartOfComposite": false
                 }
             ]
         }

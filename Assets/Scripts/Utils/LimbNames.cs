@@ -4,10 +4,11 @@ using UnityEngine;
 
 public enum LimbNames
 { 
-    RightRearLeg = 0,
-    LeftRearLeg = 1,
-    RightFrontLeg = 2,
-    LeftFrontLeg = 3,
-    Neck = 4,
-    Tongue = 5,
+    None = 0,
+    RightRearLeg = 1,
+    LeftRearLeg = 0,
+    RightFrontLeg = 3,
+    LeftFrontLeg = 4,
+    Neck = 5,
+    Tongue = 6,
 }
