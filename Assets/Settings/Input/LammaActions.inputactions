@@ -1,0 +1,54 @@
+{
+    "name": "LammaActions",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "58aa2a6b-799f-4b68-a77a-ce09d78a0189",
+            "actions": [
+                {
+                    "name": "LeftRearLegDown",
+                    "type": "Button",
+                    "id": "1c6d919b-2afe-4e0d-a407-1064b7f3619d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "LeftRearLegUp",
+                    "type": "Button",
+                    "id": "64e02c67-619f-497e-a5dd-4f0f66a5e8d7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "029b273d-78cf-4c3f-8890-6c1dc89eacf4",
+                    "path": "<Keyboard>/q",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftRearLegDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8d2ffb8e-dbb9-4cc9-bd29-a5498487a219",
+                    "path": "<Keyboard>/q",
+                    "interactions": "Press(behavior=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftRearLegUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
