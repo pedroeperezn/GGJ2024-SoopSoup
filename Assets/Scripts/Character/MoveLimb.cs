@@ -8,7 +8,7 @@ public class MoveLimb : MonoBehaviour
 {
     private Rigidbody2D _rb;
     private SpringJoint2D _spring;
-    private float _radius = 1.5f;
+    [SerializeField] private float _grabRadius = 1.5f;
 
     private void Awake()
     {
@@ -28,7 +28,7 @@ public class MoveLimb : MonoBehaviour
     {
         //disable the spring and check to see if we're near a stickable surface, if we are freeze the rb else just flop
         _spring.enabled = false;
-        Collider2D[] objectNear = Physics2D.OverlapCircleAll(transform.position, _radius, LayerMask.GetMask("Ground"));
+        Collider2D[] objectNear = Physics2D.OverlapCircleAll(transform.position, _grabRadius, LayerMask.GetMask("Ground"));
         if (objectNear.Length > 0)
         {
             _rb.bodyType = RigidbodyType2D.Static;
