@@ -14,7 +14,6 @@ public class ManageBodyWeight : MonoBehaviour
     public void ManageGravityScale()
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, Mathf.Infinity, LayerMask.GetMask("Ground"));
-        Debug.Log(Array.IndexOf(IsSticking, true));
         if (hit.collider == null || Array.IndexOf(IsSticking, true) != -1)
         {
             _rb.gravityScale = 1;

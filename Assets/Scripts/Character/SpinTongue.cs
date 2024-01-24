@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class SpinTongue : MonoBehaviour
 {
+    [SerializeField] private Transform _head;
     internal void Spin()
     {
         //TODO: Play animation/ make a hinge joint motor spin
@@ -14,6 +15,7 @@ public class SpinTongue : MonoBehaviour
     {
         //TODO: Add a force from the face up
         Debug.Log("Add a force from the face up");
+        
     }
     internal void StopSpinning()
     {
