@@ -16,7 +16,7 @@ public class MoveLimb : MonoBehaviour
         _spring = GetComponent<SpringJoint2D>();
     }
  
-    public void MoveInDirection(Vector2 targetInWorldSpace, float strength)
+    public void MoveInDirection(Vector2 targetInWorldSpace)
     {
         _rb.bodyType = RigidbodyType2D.Dynamic;
         _spring.enabled = true;

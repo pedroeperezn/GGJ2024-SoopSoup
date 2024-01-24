@@ -6,11 +6,10 @@ using UnityEngine.InputSystem;
 
 public class CharacterInputHandler : MonoBehaviour
 {
-    [SerializeField] private float _strength = 1000;
     [SerializeField] private List<MoveLimb> _limbs = new List<MoveLimb>();
+    [SerializeField] private SpinTongue _tongue;
     private Vector2 _mousePositionScreenSpace = Vector2.zero;
     private Camera _mainCamera => Camera.main;
-
     private Coroutine[] legsMoving = new Coroutine[6];
 
     private void Start()
@@ -81,6 +80,18 @@ public class CharacterInputHandler : MonoBehaviour
         _limbs[(int)LimbNames.Neck].TryToStick();
     }
     #endregion
+    #region Tongue
+    private void OnTongueDown(InputValue value)
+    {
+        _tongue.Spin();
+        _tongue.TryHover();
+    }
+    private void OnTongueUp(InputValue value)
+    {
+        _tongue.StopSpinning();
+        _tongue.Recharge();
+    }
+    #endregion
     #endregion
 
     private IEnumerator MoveLeg(int index)
@@ -90,8 +101,7 @@ public class CharacterInputHandler : MonoBehaviour
             yield return null;
             _mousePositionScreenSpace = Input.mousePosition;
             Vector2 mousePositionWorldSpace = _mainCamera.ScreenToWorldPoint(new Vector3(_mousePositionScreenSpace.x, _mousePositionScreenSpace.y, 0));
-            //TODO: get the world space coordinates
-            _limbs[index].MoveInDirection(mousePositionWorldSpace, _strength);
+            _limbs[index].MoveInDirection(mousePositionWorldSpace);
         }
     }
 
