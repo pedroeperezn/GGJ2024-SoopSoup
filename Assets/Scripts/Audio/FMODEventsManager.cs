@@ -14,6 +14,9 @@ public class FMODEventsManager : MonoBehaviour
     [field: Header("Llama test SFX")]
     [field: SerializeField] public EventReference LlamaTest { get; private set; }
 
+    [field: Header("Emitter Test")]
+    [field: SerializeField] public EventReference EmitterTest { get; private set; }
+
     private void Awake()
     {
         if (Instance != null)
