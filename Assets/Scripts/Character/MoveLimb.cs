@@ -24,7 +24,7 @@ public class MoveLimb : MonoBehaviour
 
     }
 
-    public void Stick()
+    public void TryToStick()
     {
         //disable the spring and check to see if we're near a stickable surface, if we are freeze the rb else just flop
         _spring.enabled = false;
