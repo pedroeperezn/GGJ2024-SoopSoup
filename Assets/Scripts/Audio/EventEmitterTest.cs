@@ -7,6 +7,7 @@ using UnityEngine;
 public class EventEmitterTest : MonoBehaviour
 {
     private StudioEventEmitter emitter;
+    private float counter;
 
     private void Start()
     {
@@ -19,6 +20,12 @@ public class EventEmitterTest : MonoBehaviour
         if(Input.GetKeyUp(KeyCode.Space)) 
         {
             Destroy(this.gameObject);
+        }
+
+        if (Input.GetKeyUp(KeyCode.Z))
+        {
+            counter += 0.1f;
+            AudioManager.Instance.SetAmbienceParameter("WindIntensity", counter);
         }
     }
 

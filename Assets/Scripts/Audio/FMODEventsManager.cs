@@ -17,6 +17,9 @@ public class FMODEventsManager : MonoBehaviour
     [field: Header("Emitter Test")]
     [field: SerializeField] public EventReference EmitterTest { get; private set; }
 
+    [field: Header("Ambience")]
+    [field: SerializeField] public EventReference Ambience { get; private set; }
+
     private void Awake()
     {
         if (Instance != null)
