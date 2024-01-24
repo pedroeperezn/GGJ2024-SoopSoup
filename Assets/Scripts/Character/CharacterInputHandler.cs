@@ -6,17 +6,11 @@ using UnityEngine.InputSystem;
 
 public class CharacterInputHandler : MonoBehaviour
 {
-    [SerializeField] private float _strength = 1000;
     [SerializeField] private List<MoveLimb> _limbs = new List<MoveLimb>();
+    [SerializeField] private SpinTongue _tongue;
     private Vector2 _mousePositionScreenSpace = Vector2.zero;
     private Camera _mainCamera => Camera.main;
-
     private Coroutine[] legsMoving = new Coroutine[6];
-
-    private void Start()
-    {
-        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Right"), LayerMask.NameToLayer("Left"));
-    }
 
     // this is pretty wet, if there's time I'll come back to it later
     #region Input Listeners
@@ -81,17 +75,29 @@ public class CharacterInputHandler : MonoBehaviour
         _limbs[(int)LimbNames.Neck].TryToStick();
     }
     #endregion
+    #region Tongue
+    private void OnTongueDown(InputValue value)
+    {
+        _tongue.Spin();
+        _tongue.TryHover();
+    }
+    private void OnTongueUp(InputValue value)
+    {
+        _tongue.StopSpinning();
+        _tongue.Recharge();
+    }
+    #endregion
     #endregion
 
     private IEnumerator MoveLeg(int index)
     {
+        _limbs[index].FreeLimb();
         while (true)
         {
             yield return null;
             _mousePositionScreenSpace = Input.mousePosition;
             Vector2 mousePositionWorldSpace = _mainCamera.ScreenToWorldPoint(new Vector3(_mousePositionScreenSpace.x, _mousePositionScreenSpace.y, 0));
-            //TODO: get the world space coordinates
-            _limbs[index].MoveInDirection(mousePositionWorldSpace, _strength);
+            _limbs[index].MoveInDirection(mousePositionWorldSpace);
         }
     }
 
