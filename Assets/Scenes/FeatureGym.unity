@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2158.3235, g: 2262.887, b: 3286.4458, a: 1}
+  m_IndirectSpecularColor: {r: 2175.8792, g: 2295.8577, b: 3375.7231, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1201,6 +1201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b16f463f9df04ee4bad09b9e8f52bf50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _limbMass: 15
   _scaleModifier:
     serializedVersion: 2
     m_Curve:
@@ -1220,16 +1221,16 @@ MonoBehaviour:
       outSlope: 0
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.00028104783
-      outWeight: 0.00028333665
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     - serializedVersion: 3
       time: 35
       value: 50
-      inSlope: 5.0971465
-      outSlope: 5.0971465
+      inSlope: 2
+      outSlope: 2
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.05518173
+      inWeight: 0
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -2577,17 +2578,22 @@ PrefabInstance:
     - target: {fileID: 697278886973085004, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
         type: 3}
       propertyPath: m_Mass
-      value: 25
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 697278886973085004, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
         type: 3}
       propertyPath: m_BodyType
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 835078144073457789, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
         type: 3}
       propertyPath: m_Name
       value: Llama
+      objectReference: {fileID: 0}
+    - target: {fileID: 943819589890547840, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
+        type: 3}
+      propertyPath: _limbName
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 954820538562555921, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
         type: 3}
@@ -2598,6 +2604,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Frequency
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1516527232001459773, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
+        type: 3}
+      propertyPath: _limbName
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1615665574341983438, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
         type: 3}
@@ -2662,22 +2673,27 @@ PrefabInstance:
     - target: {fileID: 2822933205772332601, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
         type: 3}
       propertyPath: m_Mass
-      value: 25
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 2822933205772332601, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
         type: 3}
       propertyPath: m_BodyType
-      value: 2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4290770205882760520, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
+        type: 3}
+      propertyPath: _limbName
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4557578339776891012, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
         type: 3}
       propertyPath: m_Mass
-      value: 25
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4557578339776891012, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
         type: 3}
       propertyPath: m_BodyType
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4662566870004180757, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
         type: 3}
@@ -2687,12 +2703,22 @@ PrefabInstance:
     - target: {fileID: 5777927479929826828, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
         type: 3}
       propertyPath: m_Mass
-      value: 25
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5777927479929826828, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
         type: 3}
       propertyPath: m_BodyType
-      value: 2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6366707920709464342, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
+        type: 3}
+      propertyPath: m_Mass
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6366707920709464342, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6680553845176669259, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
         type: 3}
@@ -2703,6 +2729,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: = RightFrontLeg
+      objectReference: {fileID: 0}
+    - target: {fileID: 7673514395919194386, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
+        type: 3}
+      propertyPath: _limbName
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7941229750289521760, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
         type: 3}

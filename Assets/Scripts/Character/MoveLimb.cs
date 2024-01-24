@@ -4,11 +4,14 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(SpringJoint2D))]
+[RequireComponent(typeof(HingeJoint2D))]
 public class MoveLimb : MonoBehaviour
 {
+    [SerializeField] private LimbNames _limbName;
+    [SerializeField] private float _grabRadius = 1.5f;
+
     private Rigidbody2D _rb;
     private SpringJoint2D _spring;
-    [SerializeField] private float _grabRadius = 1.5f;
     private ManageBodyWeight _body;
 
     private void Awake()
@@ -22,7 +25,6 @@ public class MoveLimb : MonoBehaviour
     private GameObject FindBody(HingeJoint2D hinge)
     {
         Rigidbody2D connectedBody = hinge.connectedBody;
-        Debug.Log(connectedBody == null || !connectedBody.TryGetComponent(out HingeJoint2D newHinge1));
         if (connectedBody == null || !connectedBody.TryGetComponent(out HingeJoint2D newHinge)) return connectedBody.gameObject;
         return FindBody(newHinge);
     }
@@ -32,7 +34,8 @@ public class MoveLimb : MonoBehaviour
         _rb.bodyType = RigidbodyType2D.Dynamic;
         _spring.enabled = true;
         ++_body.CurrentlyMovingLimbCount;
-        _body.ManageGravityScale();
+        _body.IsSticking[(int)_limbName] = false;
+        _body.ManageLimbWeight(_rb);
     }
  
     public void MoveInDirection(Vector2 targetInWorldSpace)
@@ -48,7 +51,9 @@ public class MoveLimb : MonoBehaviour
         if (objectNear.Length > 0)
         {
             _rb.bodyType = RigidbodyType2D.Static;
+            _body.IsSticking[(int)_limbName] = true;
         }
         --_body.CurrentlyMovingLimbCount;
+        _body.ManageLimbWeight(_rb);
     }
 }
