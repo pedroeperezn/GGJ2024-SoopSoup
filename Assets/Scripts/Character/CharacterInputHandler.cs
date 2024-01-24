@@ -11,7 +11,7 @@ public class CharacterInputHandler : MonoBehaviour
     [SerializeField] private List<MoveLimb> _limbs = new List<MoveLimb>();
     private Vector2 _mousePositionScreenSpace = Vector2.zero;
     private Camera _mainCamera => Camera.main;
-    [SerializeField] private bool[] _moving = new bool[] { false, false, false, false, false, false };
+    private bool[] _moving = new bool[] { false, false, false, false, false, false };
     private IEnumerator moveLeg;
 
     private void Start()
