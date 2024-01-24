@@ -10,8 +10,8 @@ public class CharacterInputHandler : MonoBehaviour
     [SerializeField] private List<MoveLimb> _limbs = new List<MoveLimb>();
     private Vector2 _mousePositionScreenSpace = Vector2.zero;
     private Camera _mainCamera => Camera.main;
-    private bool[] _moving = new bool[] { false, false, false, false, false, false };
-    private IEnumerator moveLeg;
+
+    private Coroutine[] legsMoving = new Coroutine[6];
 
     private void Start()
     {
@@ -23,19 +23,13 @@ public class CharacterInputHandler : MonoBehaviour
     #region Left Rear
     private void OnLeftRearLegDown(InputValue value)
     {
-        // check to see if we're moving any of the legs, if we are stop
-        if (Array.IndexOf(_moving, true) != -1) return;
-        // define the coroutine, this is so we can easily stop later
-        moveLeg = MoveLeg((int)LimbNames.LeftRearLeg);
         // start the coroutine
-        StartCoroutine(moveLeg);
+        legsMoving[(int)LimbNames.LeftRearLeg] = StartCoroutine(MoveLeg((int)LimbNames.LeftRearLeg));
     }
     private void OnLeftRearLegUp(InputValue value)
     {
-        // set the correct moving bool false
-        _moving[(int)LimbNames.LeftRearLeg] = false;
         // stop the current coroutine
-        StopCoroutine(moveLeg);
+        StopCoroutine(legsMoving[(int)LimbNames.LeftRearLeg]);
         // try to stick the leg
         _limbs[(int)LimbNames.LeftRearLeg].TryToStick();
     }
@@ -43,61 +37,46 @@ public class CharacterInputHandler : MonoBehaviour
     #region Right Rear
     private void OnRightRearLegDown(InputValue value)
     {
-        if (Array.IndexOf(_moving, true) != -1) return;
-        moveLeg = MoveLeg((int)LimbNames.RightRearLeg);
-        StartCoroutine(moveLeg);
+        legsMoving[(int)LimbNames.RightRearLeg] = StartCoroutine(MoveLeg((int)LimbNames.RightRearLeg));
     }
     private void OnRightRearLegUp(InputValue value)
     {
-        _moving[(int)LimbNames.RightRearLeg] = false;
-        StopCoroutine(moveLeg);
+        StopCoroutine(legsMoving[(int)LimbNames.RightRearLeg]);
         _limbs[(int)LimbNames.RightRearLeg].TryToStick();
     }
     #endregion
     #region Left Front
     private void OnLeftFrontLegDown(InputValue value)
     {
-        if (Array.IndexOf(_moving, true) != -1) return;
-        moveLeg = MoveLeg((int)LimbNames.LeftFrontLeg);
-        StartCoroutine(moveLeg);
+        legsMoving[(int)LimbNames.LeftFrontLeg] = StartCoroutine(MoveLeg((int)LimbNames.LeftFrontLeg));
     }
     private void OnLeftFrontLegUp(InputValue value)
     {
-        _moving[(int)LimbNames.LeftFrontLeg] = false;
-        StopCoroutine(moveLeg);
+        StopCoroutine(legsMoving[(int)LimbNames.LeftFrontLeg]);
         _limbs[(int)LimbNames.LeftFrontLeg].TryToStick();
     }
     #endregion
     #region Right Front
     private void OnRightFrontLegDown(InputValue value)
     {
-        if (Array.IndexOf(_moving, true) != -1) return;
-        moveLeg = MoveLeg((int)LimbNames.RightFrontLeg);
-        StartCoroutine(moveLeg);
+        legsMoving[(int)LimbNames.RightFrontLeg] = StartCoroutine(MoveLeg((int)LimbNames.RightFrontLeg));
     }
     private void OnRightFrontLegUp(InputValue value)
     {
-        _moving[(int)LimbNames.RightFrontLeg] = false;
-        StopCoroutine(moveLeg);
+        StopCoroutine(legsMoving[(int)LimbNames.RightFrontLeg]);
         _limbs[(int)LimbNames.RightFrontLeg].TryToStick();
     }
     #endregion
     #region Neck
     private void OnNeckDown(InputValue value)
     {
-        // check to see if we're moving any of the legs, if we are stop
-        if (Array.IndexOf(_moving, true) != -1) return;
-        // define the coroutine, this is so we can easily stop later
-        moveLeg = MoveLeg((int)LimbNames.Neck);
         // start the coroutine
-        StartCoroutine(moveLeg);
+        legsMoving[(int)LimbNames.Neck] = StartCoroutine(MoveLeg((int)LimbNames.Neck));
     }
     private void OnNeckUp(InputValue value)
     {
-        // set the correct moving bool false
-        _moving[(int)LimbNames.Neck] = false;
         // stop the current coroutine
-        StopCoroutine(moveLeg);
+        StopCoroutine(legsMoving[(int)LimbNames.Neck]);
         // try to stick the leg
         _limbs[(int)LimbNames.Neck].TryToStick();
     }
@@ -106,7 +85,6 @@ public class CharacterInputHandler : MonoBehaviour
 
     private IEnumerator MoveLeg(int index)
     {
-        _moving[index] = true;
         while (true)
         {
             yield return null;
