@@ -45,13 +45,11 @@ public class CharacterInputHandler : MonoBehaviour
     {
         if (Array.IndexOf(_moving, true) != -1) return;
         moveLeg = MoveLeg((int)LimbNames.RightRearLeg);
-        //TODO: get the world space coordinates
         StartCoroutine(moveLeg);
     }
     private void OnRightRearLegUp(InputValue value)
     {
         _moving[(int)LimbNames.RightRearLeg] = false;
-        //TODO: get the world space coordinates
         StopCoroutine(moveLeg);
         _limbs[(int)LimbNames.RightRearLeg].TryToStick();
     }
@@ -61,13 +59,11 @@ public class CharacterInputHandler : MonoBehaviour
     {
         if (Array.IndexOf(_moving, true) != -1) return;
         moveLeg = MoveLeg((int)LimbNames.LeftFrontLeg);
-        //TODO: get the world space coordinates
         StartCoroutine(moveLeg);
     }
     private void OnLeftFrontLegUp(InputValue value)
     {
         _moving[(int)LimbNames.LeftFrontLeg] = false;
-        //TODO: get the world space coordinates
         StopCoroutine(moveLeg);
         _limbs[(int)LimbNames.LeftFrontLeg].TryToStick();
     }
@@ -77,15 +73,33 @@ public class CharacterInputHandler : MonoBehaviour
     {
         if (Array.IndexOf(_moving, true) != -1) return;
         moveLeg = MoveLeg((int)LimbNames.RightFrontLeg);
-        //TODO: get the world space coordinates
         StartCoroutine(moveLeg);
     }
     private void OnRightFrontLegUp(InputValue value)
     {
         _moving[(int)LimbNames.RightFrontLeg] = false;
-        //TODO: get the world space coordinates
         StopCoroutine(moveLeg);
         _limbs[(int)LimbNames.RightFrontLeg].TryToStick();
+    }
+    #endregion
+    #region Neck
+    private void OnNeckDown(InputValue value)
+    {
+        // check to see if we're moving any of the legs, if we are stop
+        if (Array.IndexOf(_moving, true) != -1) return;
+        // define the coroutine, this is so we can easily stop later
+        moveLeg = MoveLeg((int)LimbNames.Neck);
+        // start the coroutine
+        StartCoroutine(moveLeg);
+    }
+    private void OnNeckUp(InputValue value)
+    {
+        // set the correct moving bool false
+        _moving[(int)LimbNames.Neck] = false;
+        // stop the current coroutine
+        StopCoroutine(moveLeg);
+        // try to stick the leg
+        _limbs[(int)LimbNames.Neck].TryToStick();
     }
     #endregion
     #endregion
