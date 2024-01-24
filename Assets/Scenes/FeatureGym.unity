@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2160.8313, g: 2265.0725, b: 3288.399, a: 1}
+  m_IndirectSpecularColor: {r: 2160.8313, g: 2265.0647, b: 3288.399, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1062,50 +1062,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 100334142444355405, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
+    - target: {fileID: 697278886973085004, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
         type: 3}
-      propertyPath: m_UseLimits
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 100334142444355405, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
-        type: 3}
-      propertyPath: m_AngleLimits.m_LowerAngle
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 100334142444355405, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
-        type: 3}
-      propertyPath: m_AngleLimits.m_UpperAngle
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 388424308565142018, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
-        type: 3}
-      propertyPath: m_UseLimits
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 388424308565142018, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
-        type: 3}
-      propertyPath: m_AngleLimits.m_LowerAngle
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 388424308565142018, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
-        type: 3}
-      propertyPath: m_AngleLimits.m_UpperAngle
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 571638338858090009, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
-        type: 3}
-      propertyPath: m_UseLimits
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 571638338858090009, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
-        type: 3}
-      propertyPath: m_AngleLimits.m_LowerAngle
-      value: -20
-      objectReference: {fileID: 0}
-    - target: {fileID: 571638338858090009, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
-        type: 3}
-      propertyPath: m_AngleLimits.m_UpperAngle
-      value: 200
+      propertyPath: m_BodyType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 835078144073457789, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
         type: 3}
@@ -1162,145 +1122,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3565760344139949009, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
+    - target: {fileID: 2822933205772332601, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
         type: 3}
-      propertyPath: m_UseLimits
-      value: 1
+      propertyPath: m_BodyType
+      value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 3565760344139949009, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
+    - target: {fileID: 4557578339776891012, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
         type: 3}
-      propertyPath: m_AngleLimits.m_LowerAngle
-      value: -20
+      propertyPath: m_BodyType
+      value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 3565760344139949009, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
+    - target: {fileID: 5777927479929826828, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
         type: 3}
-      propertyPath: m_AngleLimits.m_UpperAngle
-      value: 200
+      propertyPath: m_BodyType
+      value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 3742785923275126730, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
+    - target: {fileID: 6366707920709464342, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
         type: 3}
-      propertyPath: m_UseLimits
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3742785923275126730, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
-        type: 3}
-      propertyPath: m_AngleLimits.m_LowerAngle
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 3742785923275126730, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
-        type: 3}
-      propertyPath: m_AngleLimits.m_UpperAngle
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 4032563832231469701, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
-        type: 3}
-      propertyPath: m_UseLimits
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4032563832231469701, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
-        type: 3}
-      propertyPath: m_AngleLimits.m_LowerAngle
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 4032563832231469701, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
-        type: 3}
-      propertyPath: m_AngleLimits.m_UpperAngle
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 5805800957473823511, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
-        type: 3}
-      propertyPath: m_UseLimits
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5805800957473823511, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
-        type: 3}
-      propertyPath: m_AngleLimits.m_LowerAngle
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 5805800957473823511, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
-        type: 3}
-      propertyPath: m_AngleLimits.m_UpperAngle
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 6405838602046751757, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
-        type: 3}
-      propertyPath: m_UseLimits
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6405838602046751757, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
-        type: 3}
-      propertyPath: m_AngleLimits.m_LowerAngle
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 6405838602046751757, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
-        type: 3}
-      propertyPath: m_AngleLimits.m_UpperAngle
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 6956386108528019339, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
-        type: 3}
-      propertyPath: m_UseLimits
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6956386108528019339, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
-        type: 3}
-      propertyPath: m_AngleLimits.m_LowerAngle
-      value: -20
-      objectReference: {fileID: 0}
-    - target: {fileID: 6956386108528019339, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
-        type: 3}
-      propertyPath: m_AngleLimits.m_UpperAngle
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 7063658094722667408, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
-        type: 3}
-      propertyPath: m_UseLimits
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7063658094722667408, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
-        type: 3}
-      propertyPath: m_AngleLimits.m_LowerAngle
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 7063658094722667408, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
-        type: 3}
-      propertyPath: m_AngleLimits.m_UpperAngle
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 7565564955318327441, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
-        type: 3}
-      propertyPath: m_UseLimits
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7565564955318327441, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
-        type: 3}
-      propertyPath: m_AngleLimits.m_LowerAngle
-      value: -20
-      objectReference: {fileID: 0}
-    - target: {fileID: 7565564955318327441, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
-        type: 3}
-      propertyPath: m_AngleLimits.m_UpperAngle
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 7670583363599797386, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
-        type: 3}
-      propertyPath: m_UseLimits
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7670583363599797386, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
-        type: 3}
-      propertyPath: m_AngleLimits.m_LowerAngle
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 7670583363599797386, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
-        type: 3}
-      propertyPath: m_AngleLimits.m_UpperAngle
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 8229820262934114110, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
+      propertyPath: m_BodyType
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
