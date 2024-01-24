@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2158.9016, g: 2264.2424, b: 3291.2583, a: 1}
+  m_IndirectSpecularColor: {r: 2158.3235, g: 2262.887, b: 3286.4458, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 49054857}
   - component: {fileID: 49054859}
   - component: {fileID: 49054858}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: TongueSeven
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -310,7 +310,7 @@ GameObject:
   - component: {fileID: 115252869}
   - component: {fileID: 115252871}
   - component: {fileID: 115252870}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: TongueFive
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1010,7 +1010,7 @@ GameObject:
   - component: {fileID: 885380218}
   - component: {fileID: 885380220}
   - component: {fileID: 885380219}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: TongueSix
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1183,6 +1183,57 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8688835794052351369}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1204271901 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 904826568198893854, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
+    type: 3}
+  m_PrefabInstance: {fileID: 8688835794052351369}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1204271906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204271901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16f463f9df04ee4bad09b9e8f52bf50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scaleModifier:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 10
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.00028104783
+      outWeight: 0.00028333665
+    - serializedVersion: 3
+      time: 35
+      value: 50
+      inSlope: 5.0971465
+      outSlope: 5.0971465
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.05518173
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1319111483
 GameObject:
   m_ObjectHideFlags: 0
@@ -1196,7 +1247,7 @@ GameObject:
   - component: {fileID: 1319111484}
   - component: {fileID: 1319111486}
   - component: {fileID: 1319111485}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: TongueTwo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1370,7 +1421,7 @@ GameObject:
   - component: {fileID: 1397264195}
   - component: {fileID: 1397264194}
   - component: {fileID: 1397264193}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: TongueEight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1541,7 +1592,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1504400118}
   - component: {fileID: 1504400119}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: = TongueContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1596,7 +1647,7 @@ GameObject:
   - component: {fileID: 1704539721}
   - component: {fileID: 1704539720}
   - component: {fileID: 1704539719}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: TongueFour
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1770,7 +1821,7 @@ GameObject:
   - component: {fileID: 1708988977}
   - component: {fileID: 1708988979}
   - component: {fileID: 1708988978}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: TongueThree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2301,7 +2352,7 @@ GameObject:
   - component: {fileID: 1965844748}
   - component: {fileID: 1965844750}
   - component: {fileID: 1965844749}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: TongueOne
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2523,6 +2574,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: = LeftRearLeg
       objectReference: {fileID: 0}
+    - target: {fileID: 697278886973085004, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
+        type: 3}
+      propertyPath: m_Mass
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 697278886973085004, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 835078144073457789, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
         type: 3}
       propertyPath: m_Name
@@ -2532,6 +2593,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: = LeftFrontLeg
+      objectReference: {fileID: 0}
+    - target: {fileID: 1243820013177930575, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
+        type: 3}
+      propertyPath: m_Frequency
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1615665574341983438, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
         type: 3}
@@ -2583,11 +2649,51 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1816827272445615189, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
+        type: 3}
+      propertyPath: m_Frequency
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2812783047516372179, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
         type: 3}
       propertyPath: _tongue
       value: 
       objectReference: {fileID: 1504400119}
+    - target: {fileID: 2822933205772332601, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
+        type: 3}
+      propertyPath: m_Mass
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2822933205772332601, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4557578339776891012, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
+        type: 3}
+      propertyPath: m_Mass
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4557578339776891012, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662566870004180757, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
+        type: 3}
+      propertyPath: m_Frequency
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5777927479929826828, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
+        type: 3}
+      propertyPath: m_Mass
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5777927479929826828, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6680553845176669259, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
         type: 3}
       propertyPath: m_Name
@@ -2598,10 +2704,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: = RightFrontLeg
       objectReference: {fileID: 0}
+    - target: {fileID: 7941229750289521760, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
+        type: 3}
+      propertyPath: m_Frequency
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8229820262934114110, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
         type: 3}
       propertyPath: m_Name
       value: = Neck
+      objectReference: {fileID: 0}
+    - target: {fileID: 8513560260434803421, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
+        type: 3}
+      propertyPath: m_Frequency
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2610,7 +2726,11 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1504400118}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 904826568198893854, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1204271906}
   m_SourcePrefab: {fileID: 100100000, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

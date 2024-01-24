@@ -12,11 +12,6 @@ public class CharacterInputHandler : MonoBehaviour
     private Camera _mainCamera => Camera.main;
     private Coroutine[] legsMoving = new Coroutine[6];
 
-    private void Start()
-    {
-        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Right"), LayerMask.NameToLayer("Left"));
-    }
-
     // this is pretty wet, if there's time I'll come back to it later
     #region Input Listeners
     #region Left Rear
@@ -96,6 +91,7 @@ public class CharacterInputHandler : MonoBehaviour
 
     private IEnumerator MoveLeg(int index)
     {
+        _limbs[index].FreeLimb();
         while (true)
         {
             yield return null;
