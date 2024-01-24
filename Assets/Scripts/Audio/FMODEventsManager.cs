@@ -7,6 +7,10 @@ public class FMODEventsManager : MonoBehaviour
 {
     public static FMODEventsManager Instance { get; private set; }
 
+    [field: Header("Game Music")]
+    [field: SerializeField] public EventReference Music { get; private set; }
+
+
     [field: Header("Llama test SFX")]
     [field: SerializeField] public EventReference LlamaTest { get; private set; }
 

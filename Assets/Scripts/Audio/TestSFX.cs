@@ -7,7 +7,7 @@ public class TestSFX : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.A))  
+        if (Input.GetKeyUp(KeyCode.A))  
         {
             AudioManager.Instance.PlayOneShot(FMODEventsManager.Instance.LlamaTest,this.transform.position);
         }
