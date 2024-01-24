@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum LimbNames
-{ 
-    None = 0,
-    RightRearLeg = 1,
+{
     LeftRearLeg = 0,
+    RightRearLeg = 1,
+    LeftFrontLeg = 2,
     RightFrontLeg = 3,
-    LeftFrontLeg = 4,
-    Neck = 5,
-    Tongue = 6,
+    Neck = 4,
+    Tongue = 5,
 }

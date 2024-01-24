@@ -22,6 +22,60 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "RightRearLegDown",
+                    "type": "Button",
+                    "id": "6b1d3b23-c3f1-444f-89dc-517fd5ce2529",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "RightRearLegUp",
+                    "type": "Button",
+                    "id": "8d41bcd8-6880-46e2-ad8f-0b8b40adb21f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "LeftFrontLegDown",
+                    "type": "Button",
+                    "id": "8badf40a-0204-4ec2-87fa-c593fbc616d5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "LeftFrontLegUp",
+                    "type": "Button",
+                    "id": "5e8a0bb3-ec76-4836-85c5-cc817793d752",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "RightFrontLegDown",
+                    "type": "Button",
+                    "id": "8b24a90a-6d50-43d5-af56-0f7352a3138a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "RightFrontLegUp",
+                    "type": "Button",
+                    "id": "40546ae0-4c92-45c9-9bb5-3747e170c8ec",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -38,12 +92,78 @@
                 },
                 {
                     "name": "",
+                    "id": "c81484d9-0fe2-49c1-ad6d-6c735a0fc25f",
+                    "path": "<Keyboard>/w",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RightRearLegDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "23d7c8ee-2875-4ed8-bac6-0d047c34be6c",
+                    "path": "<Keyboard>/w",
+                    "interactions": "Press(behavior=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RightRearLegUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "8d2ffb8e-dbb9-4cc9-bd29-a5498487a219",
                     "path": "<Keyboard>/q",
                     "interactions": "Press(behavior=1)",
                     "processors": "",
                     "groups": "",
                     "action": "LeftRearLegUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "405290b3-24da-4799-966f-e6d4c39fca60",
+                    "path": "<Keyboard>/r",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RightFrontLegDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2ac5d03b-eeaf-424b-a983-8e0ebb0a4c1a",
+                    "path": "<Keyboard>/e",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftFrontLegDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b3dc6d4f-47db-4199-b632-1b18b37106f7",
+                    "path": "<Keyboard>/e",
+                    "interactions": "Press(behavior=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftFrontLegUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c914b602-eeb3-4fa8-8767-e5a08d241901",
+                    "path": "<Keyboard>/r",
+                    "interactions": "Press(behavior=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RightFrontLegUp",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
