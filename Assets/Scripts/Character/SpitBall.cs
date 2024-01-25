@@ -26,13 +26,13 @@ public class SpitBall : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (_collided) return;
+        if (_collided || !gameObject.activeInHierarchy) return;
         StartCoroutine(SlowDisappear());
     }
 
     private void OnBecameInvisible()
     {
-        if (_collided) return;
+        if (_collided || !gameObject.activeInHierarchy) return;
         StartCoroutine(SlowDisappear());
     }
 
