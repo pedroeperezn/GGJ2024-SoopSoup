@@ -29,13 +29,14 @@ public class SpinTongue : MonoBehaviour
 
     private IEnumerator Hover()
     {
+        // AUDIO FOR HELICOPER GEOS HERE IF IT"S A LOOPING AUDIO PICE
         _body.IsFlying = true;
         _cooledDown = false;
         float timeElapse = 0;
         while(timeElapse < _maxSpinTime)
         {
             yield return null;
-            //_jointToSpin.Rotate(0, 0, _spinSpeed * Time.deltaTime);
+            // OR THE AUDIO CAN GO HERE FOR THE HELICOPTER IF IT'S A ONE FIRE
             _head.AddForce(Vector2.up * _hoverCurve.Evaluate(timeElapse) * 1000);
             timeElapse += Time.deltaTime;
         }
