@@ -12,6 +12,8 @@ public class SpinTongue : MonoBehaviour
     [SerializeField] private float _maxSpinTime = 10;
     [SerializeField] private float _coolDownTime = 3;
 
+    internal float CoolDownTime = 0;
+
     private bool _cooledDown = true;
     private Coroutine _hoverCoroutine;
 
@@ -62,7 +64,13 @@ public class SpinTongue : MonoBehaviour
 
     private IEnumerator CoolDown()
     {
-        yield return new WaitForSeconds(_coolDownTime);
+        // This guy might need to remove depending on how the UI works
+        CoolDownTime = 0;
+        while (CoolDownTime < _coolDownTime)
+        {
+            yield return null;
+            CoolDownTime += Time.deltaTime;
+        }
         _cooledDown = true;
     }
 }
