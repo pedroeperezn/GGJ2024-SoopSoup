@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 public class FollowScript : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class FollowScript : MonoBehaviour
     private void Update()
     {
         //make sure position = position of thing we are following
+        Vector3 pos = new Vector3(_followThisObject.transform.position.x, 
+            _followThisObject.transform.position.y, -1.3f);
         this.transform.position = _followThisObject.transform.position;
 
         //TestOnMouse();
