@@ -11,8 +11,11 @@ public class FMODEventsManager : MonoBehaviour
     [field: SerializeField] public EventReference Music { get; private set; }
 
 
-    [field: Header("Llama test SFX")]
-    [field: SerializeField] public EventReference LlamaTest { get; private set; }
+    [field: Header("Llama SFX")]
+    [field: SerializeField] public EventReference LlamaReacs { get; private set; }
+    [field: SerializeField] public EventReference LlamaLegs { get; private set; }
+
+
 
     [field: Header("Emitter Test")]
     [field: SerializeField] public EventReference EmitterTest { get; private set; }
