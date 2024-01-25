@@ -9,12 +9,13 @@ public class ManageBodyWeight : MonoBehaviour
     [SerializeField] private AnimationCurve _scaleModifier;
     internal int CurrentlyMovingLimbCount = 0;
     internal bool[] IsSticking = new bool[5];
+    internal bool IsFlying = false;
     private Rigidbody2D _rb => GetComponent<Rigidbody2D>();
 
     public void ManageGravityScale()
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, Mathf.Infinity, LayerMask.GetMask("Ground"));
-        if (hit.collider == null || Array.IndexOf(IsSticking, true) != -1)
+        if (hit.collider == null || Array.IndexOf(IsSticking, true) != -1 || IsFlying)
         {
             _rb.gravityScale = 1;
             return;

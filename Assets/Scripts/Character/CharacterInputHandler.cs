@@ -78,7 +78,6 @@ public class CharacterInputHandler : MonoBehaviour
     #region Tongue
     private void OnTongueDown(InputValue value)
     {
-        _tongue.Spin();
         _tongue.TryHover();
     }
     private void OnTongueUp(InputValue value)
