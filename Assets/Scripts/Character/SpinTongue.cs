@@ -12,6 +12,9 @@ public class SpinTongue : MonoBehaviour
     [SerializeField] private float _maxSpinTime = 10;
     [SerializeField] private float _coolDownTime = 3;
 
+    // The UI will probably need this guy, he starts at zero and goes up to whatever _coolDownTime is
+    internal float CoolDownTime = 0;
+
     private bool _cooledDown = true;
     private Coroutine _hoverCoroutine;
 
@@ -29,13 +32,14 @@ public class SpinTongue : MonoBehaviour
 
     private IEnumerator Hover()
     {
+        // AUDIO FOR HELICOPER GEOS HERE IF IT"S A LOOPING AUDIO PIECE
         _body.IsFlying = true;
         _cooledDown = false;
         float timeElapse = 0;
         while(timeElapse < _maxSpinTime)
         {
             yield return null;
-            //_jointToSpin.Rotate(0, 0, _spinSpeed * Time.deltaTime);
+            // OR THE AUDIO CAN GO HERE FOR THE HELICOPTER IF IT'S A ONE FIRE
             _head.AddForce(Vector2.up * _hoverCurve.Evaluate(timeElapse) * 1000);
             timeElapse += Time.deltaTime;
         }
@@ -61,7 +65,13 @@ public class SpinTongue : MonoBehaviour
 
     private IEnumerator CoolDown()
     {
-        yield return new WaitForSeconds(_coolDownTime);
+        // This guy might need to remove depending on how the UI works
+        CoolDownTime = 0;
+        while (CoolDownTime < _coolDownTime)
+        {
+            yield return null;
+            CoolDownTime += Time.deltaTime;
+        }
         _cooledDown = true;
     }
 }

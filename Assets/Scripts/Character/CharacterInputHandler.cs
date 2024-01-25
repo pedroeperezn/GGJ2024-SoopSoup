@@ -8,7 +8,7 @@ public class CharacterInputHandler : MonoBehaviour
 {
     [SerializeField] private List<MoveLimb> _limbs = new List<MoveLimb>();
     [SerializeField] private SpinTongue _tongue;
-    private Vector2 _mousePositionScreenSpace = Vector2.zero;
+    [SerializeField] private Spit _spit;
     private Camera _mainCamera => Camera.main;
     private Coroutine[] legsMoving = new Coroutine[6];
 
@@ -86,6 +86,12 @@ public class CharacterInputHandler : MonoBehaviour
         _tongue.Recharge();
     }
     #endregion
+    #region Spit
+    private void OnSpit(InputValue value)
+    {
+        _spit.TryShoot();
+    }
+    #endregion
     #endregion
 
     private IEnumerator MoveLeg(int index)
@@ -94,10 +100,7 @@ public class CharacterInputHandler : MonoBehaviour
         while (true)
         {
             yield return null;
-            _mousePositionScreenSpace = Input.mousePosition;
-            Vector2 mousePositionWorldSpace = _mainCamera.ScreenToWorldPoint(new Vector3(_mousePositionScreenSpace.x, _mousePositionScreenSpace.y, 0));
-            _limbs[index].MoveInDirection(mousePositionWorldSpace);
+            _limbs[index].MoveInDirection(MouseHelper.GetMouseWorldSpace(_mainCamera));
         }
     }
-
 }

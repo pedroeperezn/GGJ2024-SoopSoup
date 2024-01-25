@@ -33,6 +33,7 @@ public class MoveLimb : MonoBehaviour
     {
         _rb.bodyType = RigidbodyType2D.Dynamic;
         _spring.enabled = true;
+
         ++_body.CurrentlyMovingLimbCount;
         _body.IsSticking[(int)_limbName] = false;
         _body.ManageLimbWeight(_rb);
@@ -40,16 +41,19 @@ public class MoveLimb : MonoBehaviour
  
     public void MoveInDirection(Vector2 targetInWorldSpace)
     {
+        // AUDIO FOR 'SWOOSH' MIGHT GO HERE, I'm honestly not sure how you want to achieve it,
+        // feel free to message Connor if this wont work or if it's confusing
         _spring.connectedAnchor = targetInWorldSpace;
     }
 
     public void TryToStick()
     {
-        //disable the spring and check to see if we're near a stickable surface, if we are freeze the rb else just flop
+        //disable the spring and check to see if we're near a stick-able surface, if we are freeze the rb else just flop
         _spring.enabled = false;
         Collider2D[] objectNear = Physics2D.OverlapCircleAll(transform.position, _grabRadius, LayerMask.GetMask("Ground"));
         if (objectNear.Length > 0)
         {
+            // AUDIO GOES HERE FOR STICKING A LIMB
             _rb.bodyType = RigidbodyType2D.Static;
             _body.IsSticking[(int)_limbName] = true;
         }
