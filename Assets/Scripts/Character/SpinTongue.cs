@@ -12,6 +12,7 @@ public class SpinTongue : MonoBehaviour
     [SerializeField] private float _maxSpinTime = 10;
     [SerializeField] private float _coolDownTime = 3;
 
+    // The UI will probably need this guy, he starts at zero and goes up to whatever _coolDownTime is
     internal float CoolDownTime = 0;
 
     private bool _cooledDown = true;
