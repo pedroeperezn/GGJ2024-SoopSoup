@@ -27,6 +27,7 @@ public class SpitBall : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (_collided || !gameObject.activeInHierarchy) return;
+        //ADUIO FIRE FOR SPIT COLLISION GOES HERE
         StartCoroutine(SlowDisappear());
     }
 
