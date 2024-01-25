@@ -98,8 +98,8 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 1
-  m_Mass: 0.80946946
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -134,7 +134,7 @@ HingeJoint2D:
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
-    m_MaximumMotorForce: 10000
+    m_MaximumMotorForce: 300
   m_UseLimits: 0
   m_AngleLimits:
     m_LowerAngle: 0
@@ -557,8 +557,8 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 1
-  m_Mass: 0.80946946
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -593,7 +593,7 @@ HingeJoint2D:
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
-    m_MaximumMotorForce: 10000
+    m_MaximumMotorForce: 300
   m_UseLimits: 0
   m_AngleLimits:
     m_LowerAngle: 0
@@ -731,8 +731,8 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 1
-  m_Mass: 0.80946946
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -767,7 +767,7 @@ HingeJoint2D:
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
-    m_MaximumMotorForce: 10000
+    m_MaximumMotorForce: 300
   m_UseLimits: 0
   m_AngleLimits:
     m_LowerAngle: 0
@@ -1079,8 +1079,8 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 1
-  m_Mass: 0.80946946
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -1115,7 +1115,7 @@ HingeJoint2D:
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
-    m_MaximumMotorForce: 10000
+    m_MaximumMotorForce: 300
   m_UseLimits: 0
   m_AngleLimits:
     m_LowerAngle: 0
@@ -1211,8 +1211,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
-      value: 30
+      time: 0.16928847
+      value: -0.28027916
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -1220,22 +1220,22 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 1.0850921
-      value: 4.10532
-      inSlope: -15.623325
-      outSlope: -15.623325
-      tangentMode: 0
+      time: 1.1474283
+      value: 2.8352416
+      inSlope: -15.412787
+      outSlope: 0.15067929
+      tangentMode: 1
       weightedMode: 0
-      inWeight: 0
-      outWeight: 0
+      inWeight: 0.11353549
+      outWeight: 0.9091165
     - serializedVersion: 3
-      time: 1.178582
-      value: 3.3576884
-      inSlope: -2.2182605
-      outSlope: -2.2182605
+      time: 3.249739
+      value: 2.0876179
+      inSlope: -1.3296268
+      outSlope: -1.3296268
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.2664798
       outWeight: 0
     - serializedVersion: 3
       time: 5
@@ -1252,7 +1252,8 @@ MonoBehaviour:
   _head: {fileID: 2822933205772332601}
   _body: {fileID: 9112939008301971908}
   _jointToSpin: {fileID: 1302245517056767866}
-  _spinSpeed: 1000
+  _maxSpinTime: 10
+  _coolDownTime: 3
 --- !u!1 &6108350550942415318
 GameObject:
   m_ObjectHideFlags: 0
@@ -1384,7 +1385,7 @@ HingeJoint2D:
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 1.344285, y: 0.18763924}
   m_ConnectedAnchor: {x: -1.8457155, y: 0.48763847}
-  m_UseMotor: 0
+  m_UseMotor: 1
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
@@ -1525,8 +1526,8 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 1
-  m_Mass: 0.80946946
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -1561,7 +1562,7 @@ HingeJoint2D:
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
-    m_MaximumMotorForce: 10000
+    m_MaximumMotorForce: 300
   m_UseLimits: 0
   m_AngleLimits:
     m_LowerAngle: 0
@@ -1699,8 +1700,8 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 1
-  m_Mass: 0.80946946
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -1734,7 +1735,7 @@ HingeJoint2D:
   m_ConnectedAnchor: {x: 3.7758079, y: 0.17593765}
   m_UseMotor: 0
   m_Motor:
-    m_MotorSpeed: 0
+    m_MotorSpeed: 700
     m_MaximumMotorForce: 10000
   m_UseLimits: 0
   m_AngleLimits:
@@ -1906,7 +1907,7 @@ HingeJoint2D:
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.7401235, y: -0.31144333}
   m_ConnectedAnchor: {x: 0.4798758, y: 1.3585587}
-  m_UseMotor: 0
+  m_UseMotor: 1
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
@@ -2047,8 +2048,8 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 1
-  m_Mass: 0.80946946
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -2083,7 +2084,7 @@ HingeJoint2D:
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
-    m_MaximumMotorForce: 10000
+    m_MaximumMotorForce: 300
   m_UseLimits: 0
   m_AngleLimits:
     m_LowerAngle: 0
@@ -2221,8 +2222,8 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 1
-  m_Mass: 0.80946946
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -2257,7 +2258,7 @@ HingeJoint2D:
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
-    m_MaximumMotorForce: 10000
+    m_MaximumMotorForce: 300
   m_UseLimits: 0
   m_AngleLimits:
     m_LowerAngle: 0
