@@ -33,6 +33,7 @@ public class MoveLimb : MonoBehaviour
     {
         _rb.bodyType = RigidbodyType2D.Dynamic;
         _spring.enabled = true;
+
         ++_body.CurrentlyMovingLimbCount;
         _body.IsSticking[(int)_limbName] = false;
         _body.ManageLimbWeight(_rb);
@@ -50,6 +51,7 @@ public class MoveLimb : MonoBehaviour
         Collider2D[] objectNear = Physics2D.OverlapCircleAll(transform.position, _grabRadius, LayerMask.GetMask("Ground"));
         if (objectNear.Length > 0)
         {
+            // AUDIO GOES HERE FOR STICKING A LIMB
             _rb.bodyType = RigidbodyType2D.Static;
             _body.IsSticking[(int)_limbName] = true;
         }
