@@ -9,7 +9,6 @@ public class CharacterInputHandler : MonoBehaviour
     [SerializeField] private List<MoveLimb> _limbs = new List<MoveLimb>();
     [SerializeField] private SpinTongue _tongue;
     [SerializeField] private Spit _spit;
-    private Vector2 _mousePositionScreenSpace = Vector2.zero;
     private Camera _mainCamera => Camera.main;
     private Coroutine[] legsMoving = new Coroutine[6];
 
@@ -104,5 +103,4 @@ public class CharacterInputHandler : MonoBehaviour
             _limbs[index].MoveInDirection(MouseHelper.GetMouseWorldSpace(_mainCamera));
         }
     }
-
 }

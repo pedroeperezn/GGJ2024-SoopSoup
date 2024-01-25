@@ -32,7 +32,7 @@ public class SpinTongue : MonoBehaviour
 
     private IEnumerator Hover()
     {
-        // AUDIO FOR HELICOPER GEOS HERE IF IT"S A LOOPING AUDIO PICE
+        // AUDIO FOR HELICOPER GEOS HERE IF IT"S A LOOPING AUDIO PIECE
         _body.IsFlying = true;
         _cooledDown = false;
         float timeElapse = 0;
