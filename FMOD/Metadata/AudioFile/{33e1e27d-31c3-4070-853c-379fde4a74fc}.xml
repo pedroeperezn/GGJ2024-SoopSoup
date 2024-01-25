@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{33e1e27d-31c3-4070-853c-379fde4a74fc}">
 		<property name="assetPath">
-			<value>Llama/LlamaChirp.wav</value>
+			<value>Llama/Reacs/LlamaChirp.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>96</value>

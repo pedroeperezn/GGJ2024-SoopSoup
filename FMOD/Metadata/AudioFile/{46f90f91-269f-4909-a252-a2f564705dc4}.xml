@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{46f90f91-269f-4909-a252-a2f564705dc4}">
 		<property name="assetPath">
-			<value>Llama/LegWhip.ogg</value>
+			<value>Llama/Movement/LegWhip.ogg</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>

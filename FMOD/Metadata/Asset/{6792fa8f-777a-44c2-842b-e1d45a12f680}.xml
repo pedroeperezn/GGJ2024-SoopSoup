@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EncodableAsset" id="{6792fa8f-777a-44c2-842b-e1d45a12f680}">
+		<property name="assetPath">
+			<value>Llama/Spit/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{04aee2df-79fe-4810-8a2f-aedfbb3bfb81}</destination>
+		</relationship>
+	</object>
+</objects>

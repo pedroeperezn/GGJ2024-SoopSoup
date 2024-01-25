@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{a8ea6c35-f64f-4270-92ee-6010b2bc3a23}">
 		<property name="assetPath">
-			<value>Llama/LlamaBreath.wav</value>
+			<value>Llama/Reacs/LlamaBreath.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>96</value>

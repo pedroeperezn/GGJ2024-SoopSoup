@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EncodableAsset" id="{3d29bb84-8411-4108-8b13-d2fb84cc44d5}">
+		<property name="assetPath">
+			<value>Llama/Reacs/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{04aee2df-79fe-4810-8a2f-aedfbb3bfb81}</destination>
+		</relationship>
+	</object>
+</objects>

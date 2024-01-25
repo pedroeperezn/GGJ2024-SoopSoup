@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{833b3d12-7d5c-41b7-9086-0f4bc3c1bd9b}">
+		<property name="assetPath">
+			<value>Llama/Reacs/LlamaReacs-004.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.77000000000000002</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{04aee2df-79fe-4810-8a2f-aedfbb3bfb81}</destination>
+		</relationship>
+	</object>
+</objects>
