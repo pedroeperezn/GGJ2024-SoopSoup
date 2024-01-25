@@ -11,7 +11,7 @@ public class SpitBall : MonoBehaviour
     private Rigidbody2D _rb => GetComponent<Rigidbody2D>();
     public void Fire(Vector2 force)
     {
-        Debug.Log("Fire");
+        //AUDIO FIRE FOR SPIT GOES HERE
         gameObject.SetActive(true);
         _rb.AddForce(force, ForceMode2D.Impulse);
     }
@@ -27,6 +27,7 @@ public class SpitBall : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (_collided || !gameObject.activeInHierarchy) return;
+        //ADUIO FIRE FOR SPIT COLLISION GOES HERE
         StartCoroutine(SlowDisappear());
     }
 
