@@ -1111,7 +1111,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.29580832, y: 0.21594048}
-  m_ConnectedAnchor: {x: 0.29580832, y: -0.7340603}
+  m_ConnectedAnchor: {x: 0.29580832, y: -0.7340584}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1180,8 +1180,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5961318699455215807}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.17, y: 8.07, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.17, y: 8.069999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1207,6 +1207,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c35f4696048d6734c8fc33638a4e408c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _hoverCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 30
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1.0850921
+      value: 4.10532
+      inSlope: -15.623325
+      outSlope: -15.623325
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1.178582
+      value: 3.3576884
+      inSlope: -2.2182605
+      outSlope: -2.2182605
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 5
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _head: {fileID: 2822933205772332601}
+  _body: {fileID: 9112939008301971908}
+  _jointToSpin: {fileID: 1302245517056767866}
+  _spinSpeed: 1000
 --- !u!1 &6108350550942415318
 GameObject:
   m_ObjectHideFlags: 0
@@ -1511,7 +1557,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.29580832, y: 0.21594048}
-  m_ConnectedAnchor: {x: 0.29580832, y: -0.75405884}
+  m_ConnectedAnchor: {x: 0.29580832, y: -0.75406075}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1685,7 +1731,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.29580832, y: 0.21594048}
-  m_ConnectedAnchor: {x: 3.7758079, y: 0.17593956}
+  m_ConnectedAnchor: {x: 3.7758079, y: 0.17593765}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -2372,7 +2418,7 @@ PrefabInstance:
     - target: {fileID: 3044474979155512499, guid: 063397071d9d6c24994aafd2b4e22420,
         type: 3}
       propertyPath: m_BodyType
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4349556499996229215, guid: 063397071d9d6c24994aafd2b4e22420,
         type: 3}
@@ -2739,7 +2785,7 @@ PrefabInstance:
     - target: {fileID: 3044474979155512499, guid: 063397071d9d6c24994aafd2b4e22420,
         type: 3}
       propertyPath: m_BodyType
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4349556499996229215, guid: 063397071d9d6c24994aafd2b4e22420,
         type: 3}
@@ -2998,7 +3044,7 @@ PrefabInstance:
     - target: {fileID: 3044474979155512499, guid: 063397071d9d6c24994aafd2b4e22420,
         type: 3}
       propertyPath: m_BodyType
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4349556499996229215, guid: 063397071d9d6c24994aafd2b4e22420,
         type: 3}
@@ -3252,7 +3298,7 @@ PrefabInstance:
     - target: {fileID: 3044474979155512499, guid: 063397071d9d6c24994aafd2b4e22420,
         type: 3}
       propertyPath: m_BodyType
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4349556499996229215, guid: 063397071d9d6c24994aafd2b4e22420,
         type: 3}
@@ -3435,7 +3481,7 @@ PrefabInstance:
     - target: {fileID: 3044474979155512499, guid: 063397071d9d6c24994aafd2b4e22420,
         type: 3}
       propertyPath: m_BodyType
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5854703717773296873, guid: 063397071d9d6c24994aafd2b4e22420,
         type: 3}
