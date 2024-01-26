@@ -85,7 +85,7 @@ public class CharacterInputHandler : MonoBehaviour
     #region Tongue
     private void OnTongueDown(InputValue value)
     {
-        _tongue.TryHover();
+        _tongue.TryHover(_limbs);
     }
     private void OnTongueUp(InputValue value)
     {
@@ -98,7 +98,7 @@ public class CharacterInputHandler : MonoBehaviour
     {
         foreach(MoveLimb limb in _limbs)
         {
-            //limb.FreeLimb();
+            limb.ReleaseLimb();
         }
     }
     #endregion
