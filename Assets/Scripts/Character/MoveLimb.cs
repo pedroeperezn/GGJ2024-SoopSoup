@@ -62,4 +62,13 @@ public class MoveLimb : MonoBehaviour
         --_body.CurrentlyMovingLimbCount;
         _body.ManageLimbWeight(_rb);
     }
+
+    public void ReleaseLimb()
+    {
+        _rb.bodyType = RigidbodyType2D.Dynamic;
+        _spring.enabled = false;
+        _body.IsSticking[(int)_limbName] = false;
+        _body.CurrentlyMovingLimbCount = 0;
+        _body.ManageLimbWeight(_rb);
+    }
 }
