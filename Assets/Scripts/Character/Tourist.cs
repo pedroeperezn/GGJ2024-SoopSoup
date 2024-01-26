@@ -14,7 +14,7 @@ public class Tourist : MonoBehaviour
         Collider2D[] inRange = Physics2D.OverlapCircleAll(_body.position, _grabRadius, LayerMask.GetMask("Human"));
         if (inRange.Length == 0) return;
         _joints.Clear();
-        foreach(Collider2D collider in inRange)
+        foreach (Collider2D collider in inRange)
         {
             if (collider.TryGetComponent(out SpringJoint2D newJoint))
             {
@@ -23,7 +23,7 @@ public class Tourist : MonoBehaviour
         }
 
         bool synced = true;
-        foreach(SpringJoint2D joint in _joints)
+        foreach (SpringJoint2D joint in _joints)
         {
             if (!joint.enabled)
             {
@@ -31,7 +31,7 @@ public class Tourist : MonoBehaviour
             }
         }
 
-        foreach(SpringJoint2D joint in _joints)
+        foreach (SpringJoint2D joint in _joints)
         {
             joint.connectedBody = _body;
             joint.enabled = (synced) ? !joint.enabled : true;

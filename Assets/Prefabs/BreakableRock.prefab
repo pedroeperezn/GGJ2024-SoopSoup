@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6571942800153245669}
   - component: {fileID: 2492035896631807257}
   - component: {fileID: 2906300613799408946}
+  - component: {fileID: 7926381535838806777}
   m_Layer: 11
   m_Name: BreakableRock
   m_TagString: Untagged
@@ -133,3 +134,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d012c79cb2a92324da012e5faeb8ffc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _maxForce: 5000
+--- !u!50 &7926381535838806777
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3237594699312850533}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

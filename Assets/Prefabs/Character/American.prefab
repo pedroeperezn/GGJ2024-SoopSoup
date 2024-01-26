@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6491735600383954908}
   - component: {fileID: 5162263229823510857}
   - component: {fileID: 7133280054741838214}
+  - component: {fileID: 2571071351461071388}
   m_Layer: 12
   m_Name: RightHand
   m_TagString: Untagged
@@ -165,7 +166,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 1.0583448, y: -0.026741982}
-  m_ConnectedAnchor: {x: -2.6916552, y: 0.84325796}
+  m_ConnectedAnchor: {x: -2.691658, y: 0.8432579}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -174,6 +175,20 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 359
+--- !u!114 &2571071351461071388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672218643016348340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d012c79cb2a92324da012e5faeb8ffc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxForce: 50000
+  _minForce: 10000
 --- !u!1 &755327335535322631
 GameObject:
   m_ObjectHideFlags: 0
@@ -221,6 +236,7 @@ GameObject:
   - component: {fileID: 3527070455093421243}
   - component: {fileID: 7528720287617136919}
   - component: {fileID: 5889039178380283102}
+  - component: {fileID: 1070835565709607071}
   m_Layer: 12
   m_Name: UpperLeftLeg
   m_TagString: Untagged
@@ -373,7 +389,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 2.56}
-  m_ConnectedAnchor: {x: 1.7, y: -2.3000002}
+  m_ConnectedAnchor: {x: 1.699997, y: -2.3000011}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -382,6 +398,20 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 359
+--- !u!114 &1070835565709607071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1127092430199205477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d012c79cb2a92324da012e5faeb8ffc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxForce: 50000
+  _minForce: 10000
 --- !u!1 &1211805473500501426
 GameObject:
   m_ObjectHideFlags: 0
@@ -394,6 +424,7 @@ GameObject:
   - component: {fileID: 6749394300548695769}
   - component: {fileID: 1973330175434003929}
   - component: {fileID: 7727336492041565865}
+  - component: {fileID: 2297939982232159135}
   m_Layer: 12
   m_Name: UpperBody
   m_TagString: Untagged
@@ -530,6 +561,20 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 5.12, y: 5.12}
   m_Direction: 0
+--- !u!114 &2297939982232159135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211805473500501426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d012c79cb2a92324da012e5faeb8ffc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxForce: 50000
+  _minForce: 10000
 --- !u!1 &1411674928084407832
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,6 +588,7 @@ GameObject:
   - component: {fileID: 4783311284858771443}
   - component: {fileID: 3134686322110066816}
   - component: {fileID: 5253844400667595012}
+  - component: {fileID: 3230923812629377896}
   m_Layer: 12
   m_Name: Head
   m_TagString: Untagged
@@ -695,7 +741,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.057009816, y: -1.6587276}
-  m_ConnectedAnchor: {x: 0.057009816, y: 2.4512725}
+  m_ConnectedAnchor: {x: 0.057006836, y: 2.4512749}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -704,6 +750,20 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 210
     m_UpperAngle: 330
+--- !u!114 &3230923812629377896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411674928084407832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d012c79cb2a92324da012e5faeb8ffc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxForce: 50000
+  _minForce: 10000
 --- !u!1 &1895684798088659985
 GameObject:
   m_ObjectHideFlags: 0
@@ -717,6 +777,7 @@ GameObject:
   - component: {fileID: 3334184224229528146}
   - component: {fileID: 249640710731477079}
   - component: {fileID: 6473712636174028093}
+  - component: {fileID: 4588942328380088874}
   m_Layer: 12
   m_Name: LowerRightLeg
   m_TagString: Untagged
@@ -878,6 +939,20 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 359
+--- !u!114 &4588942328380088874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895684798088659985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d012c79cb2a92324da012e5faeb8ffc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxForce: 50000
+  _minForce: 10000
 --- !u!1 &2453026262841973926
 GameObject:
   m_ObjectHideFlags: 0
@@ -892,6 +967,7 @@ GameObject:
   - component: {fileID: 1708332704540637147}
   - component: {fileID: 3576006764453180814}
   - component: {fileID: 9021098309943084877}
+  - component: {fileID: 7773275855242141621}
   m_Layer: 12
   m_Name: LowerBody
   m_TagString: Untagged
@@ -1074,6 +1150,20 @@ SpringJoint2D:
   m_Distance: 4.4702797
   m_DampingRatio: 0.5
   m_Frequency: 3
+--- !u!114 &7773275855242141621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2453026262841973926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d012c79cb2a92324da012e5faeb8ffc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxForce: 50000
+  _minForce: 10000
 --- !u!1 &3407185603281411212
 GameObject:
   m_ObjectHideFlags: 0
@@ -1087,6 +1177,7 @@ GameObject:
   - component: {fileID: 5867976178979858117}
   - component: {fileID: 7254671524609662033}
   - component: {fileID: 4192365210612639292}
+  - component: {fileID: 5601774208334924889}
   m_Layer: 12
   m_Name: UpperLeftArm
   m_TagString: Untagged
@@ -1239,7 +1330,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -2.5662808, y: 0.82155114}
-  m_ConnectedAnchor: {x: 2.5337195, y: 1.7515512}
+  m_ConnectedAnchor: {x: 2.5337143, y: 1.7515526}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1248,6 +1339,20 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 359
+--- !u!114 &5601774208334924889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3407185603281411212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d012c79cb2a92324da012e5faeb8ffc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxForce: 50000
+  _minForce: 10000
 --- !u!1 &5081447026098233773
 GameObject:
   m_ObjectHideFlags: 0
@@ -1295,6 +1400,7 @@ GameObject:
   - component: {fileID: 7666353272051483746}
   - component: {fileID: 518817265306374871}
   - component: {fileID: 1845519751338174058}
+  - component: {fileID: 6300053230345308920}
   m_Layer: 12
   m_Name: LeftHand
   m_TagString: Untagged
@@ -1447,7 +1553,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -1.181653, y: 0.022488832}
-  m_ConnectedAnchor: {x: 2.568347, y: 0.8924888}
+  m_ConnectedAnchor: {x: 2.568344, y: 0.8924866}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1456,6 +1562,20 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 359
+--- !u!114 &6300053230345308920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5290884327101848496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d012c79cb2a92324da012e5faeb8ffc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxForce: 50000
+  _minForce: 10000
 --- !u!1 &5688091215798033127
 GameObject:
   m_ObjectHideFlags: 0
@@ -1469,6 +1589,7 @@ GameObject:
   - component: {fileID: 6656380721122538898}
   - component: {fileID: 6627135640617935445}
   - component: {fileID: 1501636354766405026}
+  - component: {fileID: 77530663412722885}
   m_Layer: 12
   m_Name: UpperRightLeg
   m_TagString: Untagged
@@ -1621,7 +1742,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 2.56}
-  m_ConnectedAnchor: {x: -1.7, y: -2.3000002}
+  m_ConnectedAnchor: {x: -1.699997, y: -2.3000011}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1630,6 +1751,20 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 359
+--- !u!114 &77530663412722885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5688091215798033127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d012c79cb2a92324da012e5faeb8ffc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxForce: 50000
+  _minForce: 10000
 --- !u!1 &6117772640833323207
 GameObject:
   m_ObjectHideFlags: 0
@@ -1643,6 +1778,7 @@ GameObject:
   - component: {fileID: 3299143131684351134}
   - component: {fileID: 74966135159367193}
   - component: {fileID: 7651701911195864157}
+  - component: {fileID: 1934096936030727787}
   m_Layer: 12
   m_Name: LowerLeftLeg
   m_TagString: Untagged
@@ -1804,6 +1940,20 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 359
+--- !u!114 &1934096936030727787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6117772640833323207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d012c79cb2a92324da012e5faeb8ffc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxForce: 50000
+  _minForce: 10000
 --- !u!1 &6412368533311718875
 GameObject:
   m_ObjectHideFlags: 0
@@ -1851,6 +2001,7 @@ GameObject:
   - component: {fileID: 2271331996355301621}
   - component: {fileID: 40548131325662227}
   - component: {fileID: 4029127591441748738}
+  - component: {fileID: 7890930432520486780}
   m_Layer: 12
   m_Name: LeftFoot
   m_TagString: Untagged
@@ -2003,7 +2154,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.013797164, y: 0.57320213}
-  m_ConnectedAnchor: {x: 0.013797164, y: -2.7567978}
+  m_ConnectedAnchor: {x: 0.013793945, y: -2.7567978}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -2012,6 +2163,20 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 359
+--- !u!114 &7890930432520486780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6589417361252830772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d012c79cb2a92324da012e5faeb8ffc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxForce: 50000
+  _minForce: 10000
 --- !u!1 &6767167681521413701
 GameObject:
   m_ObjectHideFlags: 0
@@ -2025,6 +2190,7 @@ GameObject:
   - component: {fileID: 8480354732200068792}
   - component: {fileID: 9074420821780800981}
   - component: {fileID: 5750387153912469153}
+  - component: {fileID: 1971834509586437856}
   m_Layer: 12
   m_Name: RightFoot
   m_TagString: Untagged
@@ -2177,7 +2343,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.013797164, y: 0.57320213}
-  m_ConnectedAnchor: {x: 0.013797164, y: -2.7567978}
+  m_ConnectedAnchor: {x: 0.013793945, y: -2.7567978}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -2186,6 +2352,20 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 359
+--- !u!114 &1971834509586437856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6767167681521413701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d012c79cb2a92324da012e5faeb8ffc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxForce: 50000
+  _minForce: 10000
 --- !u!1 &6780378883355030257
 GameObject:
   m_ObjectHideFlags: 0
@@ -2199,6 +2379,7 @@ GameObject:
   - component: {fileID: 4177976952795555008}
   - component: {fileID: 1321821732949874173}
   - component: {fileID: 70529402676540709}
+  - component: {fileID: 268366204555787545}
   m_Layer: 12
   m_Name: UpperRightArm
   m_TagString: Untagged
@@ -2351,7 +2532,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 2.6153016, y: 0.7276252}
-  m_ConnectedAnchor: {x: -2.4846988, y: 1.6576252}
+  m_ConnectedAnchor: {x: -2.4846954, y: 1.6576271}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -2360,6 +2541,20 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 359
+--- !u!114 &268366204555787545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6780378883355030257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d012c79cb2a92324da012e5faeb8ffc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxForce: 50000
+  _minForce: 10000
 --- !u!1 &6865130032908763995
 GameObject:
   m_ObjectHideFlags: 0
@@ -2411,6 +2606,7 @@ GameObject:
   - component: {fileID: 6448687963424218235}
   - component: {fileID: 8690597033740238496}
   - component: {fileID: 3589263843429809460}
+  - component: {fileID: 8573486625802865152}
   m_Layer: 12
   m_Name: LowerLeftArm
   m_TagString: Untagged
@@ -2563,7 +2759,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -2.5662808, y: 0.82155114}
-  m_ConnectedAnchor: {x: 2.4337192, y: 0.82155114}
+  m_ConnectedAnchor: {x: 2.4337158, y: 0.8215523}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -2572,6 +2768,20 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 359
+--- !u!114 &8573486625802865152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7009968549837439917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d012c79cb2a92324da012e5faeb8ffc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxForce: 50000
+  _minForce: 10000
 --- !u!1 &7684734210208589848
 GameObject:
   m_ObjectHideFlags: 0
@@ -2585,6 +2795,7 @@ GameObject:
   - component: {fileID: 8946633277246178441}
   - component: {fileID: 7651034354422958958}
   - component: {fileID: 7043110689015407017}
+  - component: {fileID: 128166292685509466}
   m_Layer: 12
   m_Name: LowerRightArm
   m_TagString: Untagged
@@ -2737,7 +2948,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 2.472591, y: 0.78694206}
-  m_ConnectedAnchor: {x: -2.527409, y: 0.78694206}
+  m_ConnectedAnchor: {x: -2.5274124, y: 0.7869415}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -2746,6 +2957,20 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 359
+--- !u!114 &128166292685509466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7684734210208589848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d012c79cb2a92324da012e5faeb8ffc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxForce: 50000
+  _minForce: 10000
 --- !u!1 &8862741468933243752
 GameObject:
   m_ObjectHideFlags: 0
