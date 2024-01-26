@@ -162,6 +162,13 @@ MonoBehaviour:
       Data3: -1345952840
       Data4: 1208164731
     Path: event:/Llama/LlamaSticks
+  <LlamaSpits>k__BackingField:
+    Guid:
+      Data1: -1471930407
+      Data2: 1294138065
+      Data3: -300170570
+      Data4: -1765547203
+    Path: event:/Llama/LlamaSpits
   <EmitterTest>k__BackingField:
     Guid:
       Data1: 1448332822
