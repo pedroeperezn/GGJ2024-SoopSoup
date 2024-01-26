@@ -14,6 +14,7 @@ public class MoveLimb : MonoBehaviour
     private SpringJoint2D _spring;
     private ManageBodyWeight _body;
 
+
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -54,6 +55,7 @@ public class MoveLimb : MonoBehaviour
         if (objectNear.Length > 0)
         {
             // AUDIO GOES HERE FOR STICKING A LIMB
+            AudioManager.Instance.PlayOneShot(FMODEventsManager.Instance.LlamaSticks,this.gameObject.transform.position);
             _rb.bodyType = RigidbodyType2D.Static;
             _body.IsSticking[(int)_limbName] = true;
         }
