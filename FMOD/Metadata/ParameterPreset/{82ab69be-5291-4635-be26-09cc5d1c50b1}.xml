@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{82ab69be-5291-4635-be26-09cc5d1c50b1}">
+		<property name="name">
+			<value>HellicopterOff</value>
+		</property>
+		<relationship name="folder">
+			<destination>{0a6e48cb-325e-4bb4-bf8f-4a2a76ab2bd6}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{9d157f13-d569-4847-85d5-c126073ce988}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{9d157f13-d569-4847-85d5-c126073ce988}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

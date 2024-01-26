@@ -1,3 +1,5 @@
+using FMOD.Studio;
+using FMODUnity;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -12,11 +14,19 @@ public class SpinTongue : MonoBehaviour
     [SerializeField] private float _maxSpinTime = 10;
     [SerializeField] private float _coolDownTime = 3;
 
+    [SerializeField] private EventInstance _helicopterEventInstance;
+
     // The UI will probably need this guy, he starts at zero and goes up to whatever _coolDownTime is
     internal float CoolDownTime = 0;
 
     private bool _cooledDown = true;
     private Coroutine _hoverCoroutine;
+
+
+    private void Start()
+    {
+        _helicopterEventInstance = AudioManager.Instance.CreateInstance(FMODEventsManager.Instance.LlamaHelicopter);
+    }
 
     internal void TryHover()
     {
@@ -33,6 +43,8 @@ public class SpinTongue : MonoBehaviour
     private IEnumerator Hover()
     {
         // AUDIO FOR HELICOPER GEOS HERE IF IT"S A LOOPING AUDIO PIECE
+        _helicopterEventInstance.setParameterByName("HellicopterOff", 0);
+        _helicopterEventInstance.start();
         _body.IsFlying = true;
         _cooledDown = false;
         float timeElapse = 0;
@@ -48,6 +60,8 @@ public class SpinTongue : MonoBehaviour
 
     internal void StopSpinning()
     {
+        _helicopterEventInstance.setParameterByName("HellicopterOff", 1);
+        //_helicopterEventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         //Stop playing the animation/Turn off the motor
         for (int i = 0; i < transform.childCount; i++)
         {

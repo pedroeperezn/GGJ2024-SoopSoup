@@ -169,6 +169,13 @@ MonoBehaviour:
       Data3: -300170570
       Data4: -1765547203
     Path: event:/Llama/LlamaSpits
+  <LlamaHelicopter>k__BackingField:
+    Guid:
+      Data1: -525523131
+      Data2: 1092502518
+      Data3: 804621982
+      Data4: 190829037
+    Path: event:/Llama/LlamaHelicopter
   <EmitterTest>k__BackingField:
     Guid:
       Data1: 1448332822
