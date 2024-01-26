@@ -9,8 +9,6 @@ public class Tourist : MonoBehaviour
     [SerializeField] private Rigidbody2D _body;
     private List<SpringJoint2D> _joints = new List<SpringJoint2D>();
 
-    private bool _canGrab = false;
-
     private void TryGrab()
     {
         Collider2D[] inRange = Physics2D.OverlapCircleAll(_body.position, _grabRadius, LayerMask.GetMask("Human"));
