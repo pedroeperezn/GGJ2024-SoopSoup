@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // this guy's just full entirely of functions that get called by the trigger event
-[CreateAssetMenu]
+[CreateAssetMenu(menuName = "ScriptableObjects/Checkpoints/Checkpoint")]
 public class Checkpoint : ScriptableObject
 {
     [SerializeField] private GameObject[] _tourists;
