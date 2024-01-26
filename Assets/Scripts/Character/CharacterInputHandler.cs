@@ -12,6 +12,8 @@ public class CharacterInputHandler : MonoBehaviour
     private Camera _mainCamera => Camera.main;
     private Coroutine[] legsMoving = new Coroutine[6];
 
+    private bool _hasWhipAudioPlayed;
+
     private void Awake()
     {
         Cursor.lockState = CursorLockMode.Confined;
@@ -102,10 +104,21 @@ public class CharacterInputHandler : MonoBehaviour
     private IEnumerator MoveLeg(int index)
     {
         _limbs[index].FreeLimb();
+        PlayLimbSound();
         while (true)
         {
             yield return null;
             _limbs[index].MoveInDirection(MouseHelper.GetMouseWorldSpace(_mainCamera));
+            _hasWhipAudioPlayed = false;
+        }
+    }
+
+    private void PlayLimbSound()
+    {
+        if (!_hasWhipAudioPlayed)
+        {
+            AudioManager.Instance.PlayOneShot(FMODEventsManager.Instance.LlamaLegs, this.gameObject.transform.position);
+            _hasWhipAudioPlayed = true;
         }
     }
 }
