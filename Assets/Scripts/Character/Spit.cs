@@ -28,6 +28,7 @@ public class Spit : MonoBehaviour
 
     private void Shoot(SpitBall spit, Vector2 direction)
     {
+        AudioManager.Instance.PlayOneShot(FMODEventsManager.Instance.LlamaSpits, this.gameObject.transform.position);
         _rb.AddForce(-direction * _knockBackForce, ForceMode2D.Impulse);
         spit.Fire(direction * _shootForce);
     }
