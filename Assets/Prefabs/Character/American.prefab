@@ -891,6 +891,7 @@ GameObject:
   - component: {fileID: 338662493441824934}
   - component: {fileID: 1708332704540637147}
   - component: {fileID: 3576006764453180814}
+  - component: {fileID: 9021098309943084877}
   m_Layer: 12
   m_Name: LowerBody
   m_TagString: Untagged
@@ -1052,6 +1053,27 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -20
     m_UpperAngle: 200
+--- !u!231 &9021098309943084877
+SpringJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2453026262841973926}
+  m_Enabled: 0
+  serializedVersion: 4
+  m_EnableCollision: 1
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_BreakAction: 3
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: -2.25, y: 3}
+  m_AutoConfigureDistance: 0
+  m_Distance: 4.4702797
+  m_DampingRatio: 0.5
+  m_Frequency: 3
 --- !u!1 &3407185603281411212
 GameObject:
   m_ObjectHideFlags: 0

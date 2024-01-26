@@ -12,6 +12,11 @@ public class CharacterInputHandler : MonoBehaviour
     private Camera _mainCamera => Camera.main;
     private Coroutine[] legsMoving = new Coroutine[6];
 
+    private void Awake()
+    {
+        Cursor.lockState = CursorLockMode.Confined;
+    }
+
     // this is pretty wet, if there's time I'll come back to it later
     #region Input Listeners
     #region Left Rear

@@ -121,6 +121,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "GrabTourist",
+                    "type": "Button",
+                    "id": "e35c1839-4537-426a-8fbc-d3a4560cf075",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -264,6 +273,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Spit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "93dd335c-a9ec-4dbe-b6d0-0019c8793f09",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GrabTourist",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
