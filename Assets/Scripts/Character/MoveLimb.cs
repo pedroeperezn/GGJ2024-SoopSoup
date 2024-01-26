@@ -32,7 +32,6 @@ public class MoveLimb : MonoBehaviour
 
         _grabCircle = GetComponent<LineRenderer>();
         // set color
-        _grabCircle.material = new Material(Shader.Find("Legacy Shaders/Particles/Alpha Blended Premultiply"));
         _grabCircle.startColor = _canNotGrabColor;
         _grabCircle.endColor = _canNotGrabColor;
 
