@@ -19,7 +19,11 @@ public class FMODEventsManager : MonoBehaviour
     [field: SerializeField] public EventReference LlamaSpits { get; private set; }
     [field: SerializeField] public EventReference LlamaHelicopter { get; private set; }
 
-
+    [field: Header("Tourists SFX")]
+    [field: SerializeField] public EventReference TouristAmazed { get; private set; }
+    [field: SerializeField] public EventReference TouristLaug { get; private set; }
+    [field: SerializeField] public EventReference TouristScared { get; private set; }
+    [field: SerializeField] public EventReference TouristExcited { get; private set; }
 
     [field: Header("Emitter Test")]
     [field: SerializeField] public EventReference EmitterTest { get; private set; }

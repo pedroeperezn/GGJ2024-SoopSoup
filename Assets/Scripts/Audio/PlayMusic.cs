@@ -6,18 +6,28 @@ using UnityEngine;
 
 public class PlayMusic : MonoBehaviour
 {
+    public static PlayMusic Instance;
     private EventInstance musicInstance;
-    // Start is called before the first frame update
+
+    private void Awake()
+    {
+        if(Instance != null) 
+        {
+            Debug.Log("More than one Music Manager");
+        }
+
+        Instance = this;
+    }
+
     private void Start()
     {
         musicInstance = AudioManager.Instance.CreateInstance(FMODEventsManager.Instance.Music);
-
         PLAYBACK_STATE playbackState;
         musicInstance.getPlaybackState(out playbackState);
 
         if (playbackState.Equals(PLAYBACK_STATE.STOPPED))
         {
-            musicInstance.start();
+            StartMusic();
         }
 
         else 
@@ -26,6 +36,26 @@ public class PlayMusic : MonoBehaviour
         }
     }
 
+    private void StopMusic() 
+    {
+        musicInstance.stop(STOP_MODE.ALLOWFADEOUT);
+    }
+
+    private void StartMusic() 
+    {
+        musicInstance.start();
+    }
+
+    public void ChangeLevelMusic(int NewLevel)
+    {
+        StopMusic();
+        musicInstance.setParameterByName("CurrentLevel", NewLevel);
+    }
+
+    public void LevelCompleteMusic() 
+    {
+        musicInstance.setParameterByName("LevelFinished", 1);
+    }
 
     private void OnDestroy()
     {

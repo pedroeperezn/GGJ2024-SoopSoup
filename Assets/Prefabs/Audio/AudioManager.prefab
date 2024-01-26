@@ -140,7 +140,7 @@ MonoBehaviour:
       Data2: 1269328754
       Data3: -684005190
       Data4: 1353997485
-    Path: event:/Music/Lvl1Music
+    Path: event:/Music/GameMusic
   <LlamaInPainReac>k__BackingField:
     Guid:
       Data1: -506422006
@@ -183,6 +183,34 @@ MonoBehaviour:
       Data3: 804621982
       Data4: 190829037
     Path: event:/Llama/LlamaHelicopter
+  <TouristAmazed>k__BackingField:
+    Guid:
+      Data1: -392724733
+      Data2: 1092664566
+      Data3: -1428592506
+      Data4: 9883319
+    Path: event:/Tourists/TouristsAmazed
+  <TouristLaug>k__BackingField:
+    Guid:
+      Data1: 1073659874
+      Data2: 1089916994
+      Data3: 1244158911
+      Data4: -68278121
+    Path: event:/Tourists/TouristsLaugh
+  <TouristScared>k__BackingField:
+    Guid:
+      Data1: -1487791101
+      Data2: 1314020882
+      Data3: -1613402950
+      Data4: 1020278232
+    Path: event:/Tourists/TouristsScared
+  <TouristExcited>k__BackingField:
+    Guid:
+      Data1: 904546673
+      Data2: 1109896382
+      Data3: 1209029543
+      Data4: -464672353
+    Path: event:/Tourists/TouristsExcited
   <EmitterTest>k__BackingField:
     Guid:
       Data1: 1448332822

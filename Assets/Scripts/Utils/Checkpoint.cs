@@ -12,7 +12,7 @@ public class Checkpoint : ScriptableObject
     // Music Change can go here or Pedro can use the event itself
     public void ChangeMusic()
     {
-        Debug.Log("Music Changed");
+        PlayMusic.Instance.LevelCompleteMusic();
     }
 
     // idk if we're gonna use this but it seems like it would be useful
