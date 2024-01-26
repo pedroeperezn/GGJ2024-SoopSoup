@@ -22,6 +22,7 @@ public class SpinTongue : MonoBehaviour
     private bool _cooledDown = true;
     private Coroutine _hoverCoroutine;
 
+<<<<<<< HEAD
 
     private void Start()
     {
@@ -29,8 +30,18 @@ public class SpinTongue : MonoBehaviour
     }
 
     internal void TryHover()
+=======
+    internal void TryHover(List<MoveLimb> limbs)
+>>>>>>> d22db09 (Limbs release when helicoptering now)
     {
         if (!_cooledDown || _body.IsFlying) return;
+
+        // release all a limbs
+        foreach (MoveLimb limb in limbs)
+        {
+            limb.ReleaseLimb();
+        }
+
         //Add a force from the face up
         for (int i = 0; i < transform.childCount; i++)
         {
