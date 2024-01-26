@@ -2262,6 +2262,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8847865922492373115, guid: 79efcda7f9c5be649ba780d73f823675,
+        type: 3}
+      propertyPath: <LlamaHelicopter>k__BackingField.Path
+      value: event:/Llama/LlamaHelicopter
+      objectReference: {fileID: 0}
+    - target: {fileID: 8847865922492373115, guid: 79efcda7f9c5be649ba780d73f823675,
+        type: 3}
+      propertyPath: <LlamaHelicopter>k__BackingField.Guid.Data1
+      value: -525523131
+      objectReference: {fileID: 0}
+    - target: {fileID: 8847865922492373115, guid: 79efcda7f9c5be649ba780d73f823675,
+        type: 3}
+      propertyPath: <LlamaHelicopter>k__BackingField.Guid.Data2
+      value: 1092502518
+      objectReference: {fileID: 0}
+    - target: {fileID: 8847865922492373115, guid: 79efcda7f9c5be649ba780d73f823675,
+        type: 3}
+      propertyPath: <LlamaHelicopter>k__BackingField.Guid.Data3
+      value: 804621982
+      objectReference: {fileID: 0}
+    - target: {fileID: 8847865922492373115, guid: 79efcda7f9c5be649ba780d73f823675,
+        type: 3}
+      propertyPath: <LlamaHelicopter>k__BackingField.Guid.Data4
+      value: 190829037
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -16,6 +16,7 @@ public class FMODEventsManager : MonoBehaviour
     [field: SerializeField] public EventReference LlamaLegs { get; private set; }
     [field: SerializeField] public EventReference LlamaSticks { get; private set; }
     [field: SerializeField] public EventReference LlamaSpits { get; private set; }
+    [field: SerializeField] public EventReference LlamaHelicopter { get; private set; }
 
 
 

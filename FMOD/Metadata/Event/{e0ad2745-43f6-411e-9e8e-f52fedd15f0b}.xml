@@ -87,6 +87,8 @@
 		</relationship>
 		<relationship name="markers">
 			<destination>{aa6c753a-eafc-468a-b55d-00f5c4d84be4}</destination>
+			<destination>{fe6f7fb4-8917-474a-bd13-1df10639ef97}</destination>
+			<destination>{b187cc68-7e93-4271-8818-9118acfe392b}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{ae9d7beb-ee06-476d-aac3-240fc20b3140}">
@@ -201,6 +203,37 @@
 			<destination>{2f0a103a-60df-4fca-96cd-85e751809ac0}</destination>
 		</relationship>
 	</object>
+	<object class="NamedMarker" id="{fe6f7fb4-8917-474a-bd13-1df10639ef97}">
+		<property name="position">
+			<value>4.25</value>
+		</property>
+		<property name="name">
+			<value>Marker A</value>
+		</property>
+		<relationship name="timeline">
+			<destination>{15157309-5d58-49f4-819a-57b3ecc7ec29}</destination>
+		</relationship>
+		<relationship name="markerTrack">
+			<destination>{2f0a103a-60df-4fca-96cd-85e751809ac0}</destination>
+		</relationship>
+	</object>
+	<object class="TransitionMarker" id="{b187cc68-7e93-4271-8818-9118acfe392b}">
+		<property name="position">
+			<value>2</value>
+		</property>
+		<relationship name="timeline">
+			<destination>{15157309-5d58-49f4-819a-57b3ecc7ec29}</destination>
+		</relationship>
+		<relationship name="markerTrack">
+			<destination>{2f0a103a-60df-4fca-96cd-85e751809ac0}</destination>
+		</relationship>
+		<relationship name="destination">
+			<destination>{fe6f7fb4-8917-474a-bd13-1df10639ef97}</destination>
+		</relationship>
+		<relationship name="triggerConditions">
+			<destination>{9ea3460c-36d5-4779-a40d-ac53817dec47}</destination>
+		</relationship>
+	</object>
 	<object class="Automator" id="{362c4194-708d-4d22-96cf-3c258d276103}">
 		<property name="nameOfPropertyBeingAutomated">
 			<value>pitch</value>
@@ -266,6 +299,17 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{b2990076-ba76-4c8b-b98e-962b28bb63c4}" />
+	<object class="ParameterCondition" id="{9ea3460c-36d5-4779-a40d-ac53817dec47}">
+		<property name="minimum">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>1</value>
+		</property>
+		<relationship name="parameter">
+			<destination>{9d157f13-d569-4847-85d5-c126073ce988}</destination>
+		</relationship>
+	</object>
 	<object class="AutomationCurve" id="{196f4387-6aac-4db5-88f7-543b1b905411}">
 		<relationship name="parameter">
 			<destination>{15157309-5d58-49f4-819a-57b3ecc7ec29}</destination>
