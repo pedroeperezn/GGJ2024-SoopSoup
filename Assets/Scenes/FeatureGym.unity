@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2164.508, g: 2273.2776, b: 3312.7583, a: 1}
+  m_IndirectSpecularColor: {r: 2159.4631, g: 2265.1604, b: 3293.231, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -459,6 +459,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ConnectedAnchor.y
       value: 1.6576252
+      objectReference: {fileID: 0}
+    - target: {fileID: 994240281896500348, guid: 826d724f8fddd7b49b759ae46b2815da,
+        type: 3}
+      propertyPath: m_Distance
+      value: 0.005
       objectReference: {fileID: 0}
     - target: {fileID: 1501636354766405026, guid: 826d724f8fddd7b49b759ae46b2815da,
         type: 3}
@@ -1677,6 +1682,11 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.x
       value: -2.4846954
       objectReference: {fileID: 0}
+    - target: {fileID: 994240281896500348, guid: 826d724f8fddd7b49b759ae46b2815da,
+        type: 3}
+      propertyPath: m_Distance
+      value: 0.005
+      objectReference: {fileID: 0}
     - target: {fileID: 1501636354766405026, guid: 826d724f8fddd7b49b759ae46b2815da,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -1870,6 +1880,12 @@ PrefabInstance:
 --- !u!4 &1422877432 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 504439953008338462, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
+    type: 3}
+  m_PrefabInstance: {fileID: 8688835794052351369}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1422877433 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 2151768002632764838, guid: 4443fe8b3f5d8e74aaf93a48712b1f1a,
     type: 3}
   m_PrefabInstance: {fileID: 8688835794052351369}
   m_PrefabAsset: {fileID: 0}
@@ -2478,6 +2494,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 922806115}
     m_Modifications:
+    - target: {fileID: 994240281896500348, guid: 826d724f8fddd7b49b759ae46b2815da,
+        type: 3}
+      propertyPath: m_ConnectedRigidBody
+      value: 
+      objectReference: {fileID: 1422877433}
     - target: {fileID: 6865130032908763995, guid: 826d724f8fddd7b49b759ae46b2815da,
         type: 3}
       propertyPath: m_Name
