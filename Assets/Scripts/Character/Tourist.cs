@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Tourist : MonoBehaviour
@@ -8,6 +9,7 @@ public class Tourist : MonoBehaviour
     [SerializeField] private float _grabRadius = 20f;
     [SerializeField] private Rigidbody2D _body;
     private List<SpringJoint2D> _joints = new List<SpringJoint2D>();
+    private ScoreManager _score => FindObjectOfType<ScoreManager>();
 
     private void TryGrab()
     {
@@ -36,6 +38,8 @@ public class Tourist : MonoBehaviour
             joint.connectedBody = _body;
             joint.enabled = (synced) ? !joint.enabled : true;
         }
+
+        _score.PeopleCount = _joints.Where(j => j.enabled).Count();
     }
 
     private void OnGrabTourist()

@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // this guy's just full entirely of functions that get called by the trigger event
-[CreateAssetMenu]
+[CreateAssetMenu(menuName = "ScriptableObjects/Checkpoints/Checkpoint")]
 public class Checkpoint : ScriptableObject
 {
     [SerializeField] private GameObject[] _tourists;
+    [SerializeField] private float _expectedCompletionTime = 10;
 
-    // Music Change can go here or pedro can use the event itself
+    // Music Change can go here or Pedro can use the event itself
     public void ChangeMusic()
     {
         Debug.Log("Music Changed");
@@ -27,5 +28,13 @@ public class Checkpoint : ScriptableObject
     public void PopUpUI()
     {
         Debug.Log("Popped up UI");
+    }
+
+    public void GenerateScore()
+    {
+        ScoreManager score = FindObjectOfType<ScoreManager>();
+        score.CalculateTimeBonus(_expectedCompletionTime);
+        score.CalculateChaosBonus();
+        score.CalculatePeopleBonus();
     }
 }
