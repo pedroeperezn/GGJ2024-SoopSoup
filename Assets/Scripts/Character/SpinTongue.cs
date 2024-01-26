@@ -63,7 +63,7 @@ public class SpinTongue : MonoBehaviour
         {
             yield return null;
             // OR THE AUDIO CAN GO HERE FOR THE HELICOPTER IF IT'S A ONE FIRE
-            _head.AddForce(Vector2.up * _hoverCurve.Evaluate(timeElapse) * 1000);
+            _head.AddForce(Vector2.up * _hoverCurve.Evaluate(timeElapse) * 200000 * Time.deltaTime);
             timeElapse += Time.deltaTime;
         }
         StopSpinning();
