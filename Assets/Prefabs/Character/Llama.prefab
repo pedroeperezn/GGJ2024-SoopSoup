@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5037740601252647518}
   m_Layer: 9
   m_Name: TongueSix
-  m_TagString: Untagged
+  m_TagString: Llama
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -188,7 +188,7 @@ GameObject:
   - component: {fileID: 2318341698581865210}
   m_Layer: 0
   m_Name: Llama
-  m_TagString: Untagged
+  m_TagString: Llama
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -296,7 +296,7 @@ GameObject:
   - component: {fileID: 9112939008301971908}
   m_Layer: 13
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: Llama
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -491,7 +491,7 @@ GameObject:
   - component: {fileID: 591173256697022880}
   m_Layer: 9
   m_Name: TongueFour
-  m_TagString: Untagged
+  m_TagString: Llama
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -665,7 +665,7 @@ GameObject:
   - component: {fileID: 4993898242537332054}
   m_Layer: 9
   m_Name: TongueSeven
-  m_TagString: Untagged
+  m_TagString: Llama
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -839,7 +839,7 @@ GameObject:
   - component: {fileID: 4380657934553351233}
   m_Layer: 13
   m_Name: Tail
-  m_TagString: Untagged
+  m_TagString: Llama
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1013,7 +1013,7 @@ GameObject:
   - component: {fileID: 6977341029558004889}
   m_Layer: 9
   m_Name: TongueFive
-  m_TagString: Untagged
+  m_TagString: Llama
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1184,7 +1184,7 @@ GameObject:
   - component: {fileID: 7702278635872571007}
   m_Layer: 9
   m_Name: = TongueContainer
-  m_TagString: Untagged
+  m_TagString: Llama
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1286,7 +1286,7 @@ GameObject:
   - component: {fileID: 667391992147118815}
   m_Layer: 8
   m_Name: RightEar
-  m_TagString: Untagged
+  m_TagString: Llama
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1460,7 +1460,7 @@ GameObject:
   - component: {fileID: 4250483986752671765}
   m_Layer: 9
   m_Name: TongueEight
-  m_TagString: Untagged
+  m_TagString: Llama
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1668,7 +1668,7 @@ GameObject:
   - component: {fileID: 2358436753245983817}
   m_Layer: 9
   m_Name: TongueOne
-  m_TagString: Untagged
+  m_TagString: Llama
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1842,7 +1842,7 @@ GameObject:
   - component: {fileID: 1996136421436694368}
   m_Layer: 7
   m_Name: LeftEar
-  m_TagString: Untagged
+  m_TagString: Llama
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2016,7 +2016,7 @@ GameObject:
   - component: {fileID: 550243843160666788}
   m_Layer: 9
   m_Name: TongueTwo
-  m_TagString: Untagged
+  m_TagString: Llama
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2190,7 +2190,7 @@ GameObject:
   - component: {fileID: 7904658633667640620}
   m_Layer: 9
   m_Name: TongueThree
-  m_TagString: Untagged
+  m_TagString: Llama
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2412,6 +2412,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 1617297684659909153, guid: 063397071d9d6c24994aafd2b4e22420,
+        type: 3}
+      propertyPath: m_TagString
+      value: Llama
+      objectReference: {fileID: 0}
     - target: {fileID: 1758372445371278519, guid: 063397071d9d6c24994aafd2b4e22420,
         type: 3}
       propertyPath: _limbName
@@ -2487,6 +2492,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4740728310366818741, guid: 063397071d9d6c24994aafd2b4e22420,
+        type: 3}
+      propertyPath: m_TagString
+      value: Llama
       objectReference: {fileID: 0}
     - target: {fileID: 4899306957130161974, guid: 063397071d9d6c24994aafd2b4e22420,
         type: 3}
@@ -2654,6 +2664,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 7241273864470598033, guid: 063397071d9d6c24994aafd2b4e22420,
+        type: 3}
+      propertyPath: m_TagString
+      value: Llama
+      objectReference: {fileID: 0}
     - target: {fileID: 8427286675549547976, guid: 063397071d9d6c24994aafd2b4e22420,
         type: 3}
       propertyPath: m_Sprite
@@ -2669,6 +2684,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9176936342144683444, guid: 063397071d9d6c24994aafd2b4e22420,
+        type: 3}
+      propertyPath: m_TagString
+      value: Llama
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2810,6 +2830,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 1617297684659909153, guid: 063397071d9d6c24994aafd2b4e22420,
+        type: 3}
+      propertyPath: m_TagString
+      value: Llama
+      objectReference: {fileID: 0}
     - target: {fileID: 1758372445371278519, guid: 063397071d9d6c24994aafd2b4e22420,
         type: 3}
       propertyPath: _limbName
@@ -2875,6 +2900,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4740728310366818741, guid: 063397071d9d6c24994aafd2b4e22420,
+        type: 3}
+      propertyPath: m_TagString
+      value: Llama
       objectReference: {fileID: 0}
     - target: {fileID: 4899306957130161974, guid: 063397071d9d6c24994aafd2b4e22420,
         type: 3}
@@ -2967,6 +2997,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 7241273864470598033, guid: 063397071d9d6c24994aafd2b4e22420,
+        type: 3}
+      propertyPath: m_TagString
+      value: Llama
+      objectReference: {fileID: 0}
     - target: {fileID: 8427286675549547976, guid: 063397071d9d6c24994aafd2b4e22420,
         type: 3}
       propertyPath: m_Sprite
@@ -2982,6 +3017,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 9176936342144683444, guid: 063397071d9d6c24994aafd2b4e22420,
+        type: 3}
+      propertyPath: m_TagString
+      value: Llama
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3158,6 +3198,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 1617297684659909153, guid: 063397071d9d6c24994aafd2b4e22420,
+        type: 3}
+      propertyPath: m_TagString
+      value: Llama
+      objectReference: {fileID: 0}
     - target: {fileID: 1758372445371278519, guid: 063397071d9d6c24994aafd2b4e22420,
         type: 3}
       propertyPath: _limbName
@@ -3213,6 +3258,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 4740728310366818741, guid: 063397071d9d6c24994aafd2b4e22420,
+        type: 3}
+      propertyPath: m_TagString
+      value: Llama
       objectReference: {fileID: 0}
     - target: {fileID: 4899306957130161974, guid: 063397071d9d6c24994aafd2b4e22420,
         type: 3}
@@ -3295,6 +3345,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 7241273864470598033, guid: 063397071d9d6c24994aafd2b4e22420,
+        type: 3}
+      propertyPath: m_TagString
+      value: Llama
+      objectReference: {fileID: 0}
     - target: {fileID: 8427286675549547976, guid: 063397071d9d6c24994aafd2b4e22420,
         type: 3}
       propertyPath: m_Sprite
@@ -3310,6 +3365,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 9176936342144683444, guid: 063397071d9d6c24994aafd2b4e22420,
+        type: 3}
+      propertyPath: m_TagString
+      value: Llama
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3486,6 +3546,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 1617297684659909153, guid: 063397071d9d6c24994aafd2b4e22420,
+        type: 3}
+      propertyPath: m_TagString
+      value: Llama
+      objectReference: {fileID: 0}
     - target: {fileID: 1758372445371278519, guid: 063397071d9d6c24994aafd2b4e22420,
         type: 3}
       propertyPath: _limbName
@@ -3551,6 +3616,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 4740728310366818741, guid: 063397071d9d6c24994aafd2b4e22420,
+        type: 3}
+      propertyPath: m_TagString
+      value: Llama
       objectReference: {fileID: 0}
     - target: {fileID: 4899306957130161974, guid: 063397071d9d6c24994aafd2b4e22420,
         type: 3}
@@ -3643,6 +3713,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 7241273864470598033, guid: 063397071d9d6c24994aafd2b4e22420,
+        type: 3}
+      propertyPath: m_TagString
+      value: Llama
+      objectReference: {fileID: 0}
     - target: {fileID: 9176936342144683444, guid: 063397071d9d6c24994aafd2b4e22420,
         type: 3}
       propertyPath: m_Name
@@ -3652,6 +3727,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 9176936342144683444, guid: 063397071d9d6c24994aafd2b4e22420,
+        type: 3}
+      propertyPath: m_TagString
+      value: Llama
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3714,6 +3794,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 16
       objectReference: {fileID: 0}
+    - target: {fileID: 1617297684659909153, guid: 063397071d9d6c24994aafd2b4e22420,
+        type: 3}
+      propertyPath: m_TagString
+      value: Llama
+      objectReference: {fileID: 0}
     - target: {fileID: 1758372445371278519, guid: 063397071d9d6c24994aafd2b4e22420,
         type: 3}
       propertyPath: _grabRadius
@@ -3743,6 +3828,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4740728310366818741, guid: 063397071d9d6c24994aafd2b4e22420,
+        type: 3}
+      propertyPath: m_TagString
+      value: Llama
       objectReference: {fileID: 0}
     - target: {fileID: 5854703717773296873, guid: 063397071d9d6c24994aafd2b4e22420,
         type: 3}
@@ -3799,6 +3889,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 16
       objectReference: {fileID: 0}
+    - target: {fileID: 7241273864470598033, guid: 063397071d9d6c24994aafd2b4e22420,
+        type: 3}
+      propertyPath: m_TagString
+      value: Llama
+      objectReference: {fileID: 0}
     - target: {fileID: 9176936342144683444, guid: 063397071d9d6c24994aafd2b4e22420,
         type: 3}
       propertyPath: m_Name
@@ -3808,6 +3903,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 9176936342144683444, guid: 063397071d9d6c24994aafd2b4e22420,
+        type: 3}
+      propertyPath: m_TagString
+      value: Llama
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
