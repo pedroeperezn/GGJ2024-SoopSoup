@@ -9,9 +9,11 @@ public class PlayRandomLlamaSound : MonoBehaviour
     private bool _isReacPlaying;
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.relativeVelocity.magnitude > minCollisionVelocity) 
+        if (collision.relativeVelocity.magnitude > minCollisionVelocity && !_isReacPlaying) 
         {
             AudioManager.Instance.PlayOneShot(FMODEventsManager.Instance.LlamaInPainReac, this.gameObject.transform.position);
+            _isReacPlaying = true;
+            StartCoroutine(ToggleReactPlaying());
         }
     }
 
@@ -27,10 +29,24 @@ public class PlayRandomLlamaSound : MonoBehaviour
             float waitTime = Random.Range(15f, 30f);
             yield return new WaitForSeconds(waitTime);
 
-            
-            AudioManager.Instance.PlayOneShot(FMODEventsManager.Instance.LlamaCasualReac, this.gameObject.transform.position);
+            if(!_isReacPlaying) 
+            {
+                AudioManager.Instance.PlayOneShot(FMODEventsManager.Instance.LlamaCasualReac, this.gameObject.transform.position);
+                _isReacPlaying = true;
+                StartCoroutine(ToggleReactPlaying());
+            }
         }
         
+    }
+
+    private IEnumerator ToggleReactPlaying() 
+    {
+        while (true)
+        {
+            float waitTime = 3f;
+            yield return new WaitForSeconds(waitTime);
+            _isReacPlaying = false;
+        }
     }
 
 }
