@@ -141,13 +141,20 @@ MonoBehaviour:
       Data3: -684005190
       Data4: 1353997485
     Path: event:/Music/Lvl1Music
-  <LlamaReacs>k__BackingField:
+  <LlamaInPainReac>k__BackingField:
     Guid:
-      Data1: 1163675237
-      Data2: 1227905879
-      Data3: 753777059
-      Data4: -976907264
-    Path: event:/Llama/LlamaReac
+      Data1: -506422006
+      Data2: 1083540639
+      Data3: -355072852
+      Data4: 2064709974
+    Path: event:/Llama/LlamaInPain
+  <LlamaCasualReac>k__BackingField:
+    Guid:
+      Data1: 1337834812
+      Data2: 1189394357
+      Data3: -480970624
+      Data4: -652205212
+    Path: event:/Llama/LlamaCasualReacs
   <LlamaLegs>k__BackingField:
     Guid:
       Data1: 1965188708

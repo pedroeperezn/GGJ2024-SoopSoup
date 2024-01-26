@@ -11,9 +11,7 @@ public class PlayRandomLlamaSound : MonoBehaviour
     {
         if (collision.relativeVelocity.magnitude > minCollisionVelocity) 
         {
-            AudioManager.Instance.PlayOneShot(FMODEventsManager.Instance.LlamaReacs, this.gameObject.transform.position);
-/*            _isReacPlaying = true;
-            StartCoroutine(RefreshReactSound());*/
+            AudioManager.Instance.PlayOneShot(FMODEventsManager.Instance.LlamaInPainReac, this.gameObject.transform.position);
         }
     }
 
@@ -30,19 +28,9 @@ public class PlayRandomLlamaSound : MonoBehaviour
             yield return new WaitForSeconds(waitTime);
 
             
-            AudioManager.Instance.PlayOneShot(FMODEventsManager.Instance.LlamaReacs, this.gameObject.transform.position);
-/*            _isReacPlaying = true;
-            StartCoroutine(RefreshReactSound());*/
+            AudioManager.Instance.PlayOneShot(FMODEventsManager.Instance.LlamaCasualReac, this.gameObject.transform.position);
         }
         
     }
 
-/*    private IEnumerator RefreshReactSound() 
-    {
-        while (true)
-        {;
-            yield return new WaitForSeconds(3f);
-            _isReacPlaying = false;
-        }
-    }*/
 }
