@@ -91,6 +91,15 @@ public class CharacterInputHandler : MonoBehaviour
         _tongue.Recharge();
     }
     #endregion
+    #region Release Limb
+    private void OnReleaseLimbs()
+    {
+        foreach(MoveLimb limb in _limbs)
+        {
+            //limb.FreeLimb();
+        }
+    }
+    #endregion
     #region Spit
     private void OnSpit(InputValue value)
     {

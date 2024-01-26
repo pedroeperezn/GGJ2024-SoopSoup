@@ -130,6 +130,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "ReleaseLimbs",
+                    "type": "Button",
+                    "id": "653d4b24-a8cd-4d11-ae69-5ceb78de74f9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -284,6 +293,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "GrabTourist",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "84c70635-47e6-41e4-8ebc-f742279e8402",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ReleaseLimbs",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
