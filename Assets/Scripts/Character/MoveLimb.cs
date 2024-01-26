@@ -32,6 +32,7 @@ public class MoveLimb : MonoBehaviour
 
     public void FreeLimb()
     {
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Llama"), gameObject.layer, true);
         _rb.bodyType = RigidbodyType2D.Dynamic;
         _spring.enabled = true;
 
@@ -50,6 +51,7 @@ public class MoveLimb : MonoBehaviour
     public void TryToStick()
     {
         //disable the spring and check to see if we're near a stick-able surface, if we are freeze the rb else just flop
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Llama"), gameObject.layer, false);
         _spring.enabled = false;
         Collider2D[] objectNear = Physics2D.OverlapCircleAll(transform.position, _grabRadius, LayerMask.GetMask("Ground"));
         if (objectNear.Length > 0)
@@ -60,6 +62,15 @@ public class MoveLimb : MonoBehaviour
             _body.IsSticking[(int)_limbName] = true;
         }
         --_body.CurrentlyMovingLimbCount;
+        _body.ManageLimbWeight(_rb);
+    }
+
+    public void ReleaseLimb()
+    {
+        _rb.bodyType = RigidbodyType2D.Dynamic;
+        _spring.enabled = false;
+        _body.IsSticking[(int)_limbName] = false;
+        _body.CurrentlyMovingLimbCount = 0;
         _body.ManageLimbWeight(_rb);
     }
 }
