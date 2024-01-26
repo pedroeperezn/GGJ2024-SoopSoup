@@ -1,5 +1,8 @@
 using FMOD.Studio;
+<<<<<<< HEAD
 using FMODUnity;
+=======
+>>>>>>> 3205387 (small fix)
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -23,14 +26,22 @@ public class SpinTongue : MonoBehaviour
     private Coroutine _hoverCoroutine;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    private EventInstance _helicopterEventInstance;
+>>>>>>> 3205387 (small fix)
 
     private void Start()
     {
         _helicopterEventInstance = AudioManager.Instance.CreateInstance(FMODEventsManager.Instance.LlamaHelicopter);
     }
 
+<<<<<<< HEAD
     internal void TryHover()
 =======
+=======
+
+>>>>>>> 3205387 (small fix)
     internal void TryHover(List<MoveLimb> limbs)
 >>>>>>> d22db09 (Limbs release when helicoptering now)
     {
@@ -72,7 +83,11 @@ public class SpinTongue : MonoBehaviour
     internal void StopSpinning()
     {
         _helicopterEventInstance.setParameterByName("HellicopterOff", 1);
+<<<<<<< HEAD
         //_helicopterEventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+=======
+
+>>>>>>> 3205387 (small fix)
         //Stop playing the animation/Turn off the motor
         for (int i = 0; i < transform.childCount; i++)
         {
