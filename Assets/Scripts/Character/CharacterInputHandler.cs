@@ -98,7 +98,7 @@ public class CharacterInputHandler : MonoBehaviour
     {
         foreach(MoveLimb limb in _limbs)
         {
-            //limb.FreeLimb();
+            limb.ReleaseLimb();
         }
     }
     #endregion
