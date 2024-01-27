@@ -54,6 +54,7 @@ public class PlayMusic : MonoBehaviour
 
     public void LevelCompleteMusic() 
     {
+        musicInstance.setParameterByName("Continue", 0);
         musicInstance.setParameterByName("LevelFinished", 1);
     }
 
