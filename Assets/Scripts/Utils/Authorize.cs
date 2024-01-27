@@ -41,7 +41,7 @@ public class Authorize
         }
     }
 
-    private string TruncatePlayerName(string playerName, char delimiter)
+    public string TruncatePlayerName(string playerName, char delimiter)
     {
         int delimiterIndex = playerName.IndexOf(delimiter);
         string cleanName = delimiterIndex > -1 ? playerName.Substring(0, delimiterIndex) : playerName;
