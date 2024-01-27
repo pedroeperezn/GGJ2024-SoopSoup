@@ -26,6 +26,7 @@ public class StaticTourist : MonoBehaviour, ICollisionCallback
             //Ouch Audio would go here
             foreach(Rigidbody2D rb in _anchors)
             {
+                AudioManager.Instance.PlayOneShot(FMODEventsManager.Instance.TouristOuch, transform.position);
                 rb.bodyType = RigidbodyType2D.Dynamic;
                 if (rb.TryGetComponent(out Rock rock) && _shouldFly)
                 {

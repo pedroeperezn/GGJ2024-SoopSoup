@@ -211,6 +211,13 @@ MonoBehaviour:
       Data3: 1209029543
       Data4: -464672353
     Path: event:/Tourists/TouristsExcited
+  <TouristOuch>k__BackingField:
+    Guid:
+      Data1: -347470772
+      Data2: 1074916090
+      Data3: 959385987
+      Data4: -1860512990
+    Path: event:/Tourists/TouristOuch
   <EmitterTest>k__BackingField:
     Guid:
       Data1: 1448332822
