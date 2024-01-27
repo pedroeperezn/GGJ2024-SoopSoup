@@ -31,7 +31,6 @@ public class UpIndicatorUIHandler : MonoBehaviour
     private IEnumerator Fill()
     {
         if (!_spinTongue) yield return null;
-        Debug.Log("Start Filling");
         while (_spinTongue.CurrentTime < _spinTongue.CoolDownTime)
         {
             yield return null;
@@ -43,7 +42,6 @@ public class UpIndicatorUIHandler : MonoBehaviour
     private IEnumerator Drain()
     {
         if (!_spinTongue) yield return null;
-        Debug.Log("Start Draining");
         while (_spinTongue.CurrentTime < _spinTongue.MaxSpinTime)
         {
             yield return null;
