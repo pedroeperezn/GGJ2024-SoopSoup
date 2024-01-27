@@ -14,29 +14,37 @@ using UnityEngine.SocialPlatforms;
 
 public class Leaderboard : MonoBehaviour
 {
-    private string _leaderboardId = "test-id";
     private Authorize _authorize = new Authorize();
 
     private async void Awake() 
     {
         await UnityServices.InitializeAsync();
-        _authorize.AuthorizeAnonymousUserAsync("Connor");
+        _authorize.AuthorizeAnonymousUserAsync();
     }
 
     [ContextMenu("Get Scores")]
-    public async void GetScores()
+    public async Task<LeaderBoardPlace[]> GetScores()
     {
-        var scoresResponse = await LeaderboardsService.Instance.GetScoresAsync(_leaderboardId);
+        var scoresResponse = await LeaderboardsService.Instance.GetScoresAsync(LeaderBoardIds.LeaderBoards[3]);
         Debug.Log(JsonConvert.SerializeObject(scoresResponse));
+        Debug.Log(scoresResponse.Results[0].Score);
+        LeaderBoardPlace[] output = new LeaderBoardPlace[scoresResponse.Results.Count];
+        for(int i = 0; i < scoresResponse.Results.Count; ++i)
+        {
+            output[i].Name = scoresResponse.Results[i].PlayerName;
+            output[i].Rank = scoresResponse.Results[i].Rank;
+            output[i].Score = (int)scoresResponse.Results[i].Score;
+        }
+        return output;
     }
 
-    [ContextMenu("Post Score")]
-    public async void PostScores()
+    public async void PostScores(string leaderboardId, string playerName, int score)
     {
         try
         {
-            await LeaderboardsService.Instance.AddPlayerScoreAsync(_leaderboardId, 103);
-            Debug.Log($"Posted {103} to {_leaderboardId}");
+            await _authorize.SetPlayerName(playerName);
+            await LeaderboardsService.Instance.AddPlayerScoreAsync(leaderboardId, score);
+            Debug.Log($"Posted {score} to {leaderboardId}");
         }
         catch (Exception e)
         {

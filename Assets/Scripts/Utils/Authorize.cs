@@ -13,23 +13,28 @@ public class Authorize
     /// <returns></returns>
     public string GetCurrentPlayerName()
     {
-        return TruncatePlayerName(AuthenticationService.Instance.PlayerName, '#');
+        string name = AuthenticationService.Instance.PlayerName;
+        if (string.IsNullOrEmpty(name)) return "undefined";
+        return TruncatePlayerName(name, '#');
+    }
+
+    public async Task<string> SetPlayerName(string newName)
+    {
+        return await AuthenticationService.Instance.UpdatePlayerNameAsync(newName);
     }
 
     /// <summary>
     /// Signs in anonymously and assigns a name to the player
     /// </summary>
     /// <param name="playerName">The name you wish to assign to the player</param>
-    public async void AuthorizeAnonymousUserAsync(string playerName)
+    public async void AuthorizeAnonymousUserAsync()
     {
         if (AuthenticationService.Instance.IsSignedIn) return;
 
         try
         {
             await AuthenticationService.Instance.SignInAnonymouslyAsync();
-            await AuthenticationService.Instance.UpdatePlayerNameAsync(playerName);
         }
-
         catch (Exception e)
         {
             Debug.LogError(e);
