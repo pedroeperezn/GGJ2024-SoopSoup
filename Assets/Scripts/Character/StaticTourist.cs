@@ -24,9 +24,13 @@ public class StaticTourist : MonoBehaviour, ICollisionCallback
         if (collisionInfo.gameObject.CompareTag("Llama") || collisionInfo.gameObject.layer == LayerMask.NameToLayer("Spit"))
         {
             //Ouch Audio would go here
+            if (collisionInfo.gameObject.layer == LayerMask.NameToLayer("Spit"))
+            { 
+                AudioManager.Instance.PlayOneShot(FMODEventsManager.Instance.TouristOuch, transform.position);
+            }
+
             foreach(Rigidbody2D rb in _anchors)
             {
-                AudioManager.Instance.PlayOneShot(FMODEventsManager.Instance.TouristOuch, transform.position);
                 rb.bodyType = RigidbodyType2D.Dynamic;
                 if (rb.TryGetComponent(out Rock rock) && _shouldFly)
                 {
