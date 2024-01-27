@@ -166,7 +166,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.4810692, y: 1.77074}
-  m_ConnectedAnchor: {x: 0.4810692, y: -1.6192603}
+  m_ConnectedAnchor: {x: 0.48107147, y: -1.6192589}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -318,7 +318,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 1.74, y: 0.119999886}
+  m_ConnectedAnchor: {x: 1.7399979, y: 0.11999512}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -493,7 +493,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.61301446, y: 1.2694426}
-  m_ConnectedAnchor: {x: 2.3130145, y: -3.1505575}
+  m_ConnectedAnchor: {x: 2.3130112, y: -3.1505547}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -901,7 +901,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.53336525, y: -0.27225566}
-  m_ConnectedAnchor: {x: 2.746635, y: -0.27225566}
+  m_ConnectedAnchor: {x: 2.746643, y: -0.27225494}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1092,7 +1092,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.057009816, y: -1.6587276}
-  m_ConnectedAnchor: {x: 0.057009816, y: 4.7412724}
+  m_ConnectedAnchor: {x: 0.057006836, y: 4.741272}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1281,7 +1281,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.21008015, y: 0.88233757}
-  m_ConnectedAnchor: {x: -0.21008003, y: -1.9276628}
+  m_ConnectedAnchor: {x: -0.21008301, y: -1.92766}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1470,7 +1470,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -1.2343335, y: -0.13916087}
-  m_ConnectedAnchor: {x: 2.1156664, y: 1.3608391}
+  m_ConnectedAnchor: {x: 2.1156616, y: 1.3608398}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1693,7 +1693,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.61301446, y: 1.2694426}
-  m_ConnectedAnchor: {x: -1.2569855, y: -3.3905573}
+  m_ConnectedAnchor: {x: -1.2569809, y: -3.3905602}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1882,7 +1882,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 2.5593371, y: 0.2697692}
-  m_ConnectedAnchor: {x: -0.6506629, y: 0.2697692}
+  m_ConnectedAnchor: {x: -0.6506729, y: 0.26976776}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -2071,7 +2071,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 1.8220034, y: -0.041337013}
-  m_ConnectedAnchor: {x: -0.9479971, y: -0.041337013}
+  m_ConnectedAnchor: {x: -0.94799805, y: -0.04133606}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -2294,7 +2294,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 2.8529253, y: 0.022482157}
-  m_ConnectedAnchor: {x: -1.5170746, y: 1.5224822}
+  m_ConnectedAnchor: {x: -1.517067, y: 1.5224838}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -2483,7 +2483,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.4810692, y: 1.77074}
-  m_ConnectedAnchor: {x: 0.48106933, y: -1.89926}
+  m_ConnectedAnchor: {x: 0.48107147, y: -1.8992577}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -2635,7 +2635,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -1.03, y: -0.09000015}
+  m_ConnectedAnchor: {x: -1.0299988, y: -0.09000397}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -2844,7 +2844,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: -1.9099998}
+  m_ConnectedAnchor: {x: 0, y: -1.9100037}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -2876,6 +2876,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7659431361335142144}
+  - component: {fileID: 9208984851576593419}
   m_Layer: 12
   m_Name: American
   m_TagString: Untagged
@@ -2904,6 +2905,20 @@ Transform:
   - {fileID: 3140864887991351731}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9208984851576593419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6865130032908763995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7673c82a2f547d4784e122077ab7e81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _anchors:
+  - {fileID: 4783311284858771443}
 --- !u!1 &7115396839542769481
 GameObject:
   m_ObjectHideFlags: 0
@@ -3070,7 +3085,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.7427993, y: -0.21516013}
-  m_ConnectedAnchor: {x: 2.6772008, y: -0.21516013}
+  m_ConnectedAnchor: {x: 2.6772003, y: -0.21516037}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0

@@ -6,6 +6,7 @@ using UnityEngine;
 public class StaticTourist : MonoBehaviour, ICollisionCallback
 {
     [SerializeField] private Rigidbody2D[] _anchors;
+    [SerializeField] private bool _shouldFly = false;
 
     private void Awake()
     {
@@ -26,6 +27,11 @@ public class StaticTourist : MonoBehaviour, ICollisionCallback
             foreach(Rigidbody2D rb in _anchors)
             {
                 rb.bodyType = RigidbodyType2D.Dynamic;
+                if (rb.TryGetComponent(out Rock rock) && _shouldFly)
+                {
+                    _shouldFly = false;
+                    rock.Fly(collisionInfo);
+                }
             }
         }
     }
