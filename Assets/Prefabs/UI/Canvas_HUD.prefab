@@ -517,7 +517,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2380574749105700887
 RectTransform:
   m_ObjectHideFlags: 0
@@ -732,7 +732,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1936531056692051135
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2828,7 +2828,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: a5322fb54a73aaf4f97a8a52c3c1d7b8, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -3085,7 +3085,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2407113123407841063, guid: 69e455d3d6ce75e40b9f6eb3b46a9625,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6486002647225887079}
+      addedObject: {fileID: 1836134746517178738}
   m_SourcePrefab: {fileID: 100100000, guid: 69e455d3d6ce75e40b9f6eb3b46a9625, type: 3}
 --- !u!1 &7901147526178175399 stripped
 GameObject:
@@ -3110,7 +3110,7 @@ MonoBehaviour:
   - {fileID: 6337043813021517490}
   - {fileID: 7742097042979510682}
   - {fileID: 1647313725410047068}
---- !u!95 &6486002647225887079
+--- !u!95 &1836134746517178738
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
