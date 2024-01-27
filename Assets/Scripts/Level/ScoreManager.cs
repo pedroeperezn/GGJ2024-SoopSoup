@@ -51,6 +51,6 @@ public class ScoreManager : MonoBehaviour
     }
     private void Update()
     {
-        _debugText.text = _score.ToString();
+        if (_debugText) _debugText.text = _score.ToString();
     }
 }
