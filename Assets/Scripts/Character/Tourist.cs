@@ -29,7 +29,12 @@ public class Tourist : MonoBehaviour
         {
             if (!joint.enabled)
             {
+                AudioManager.Instance.PlayOneShot(FMODEventsManager.Instance.TouristExcited, transform.position);
                 synced = false;
+            }
+            else 
+            { 
+                AudioManager.Instance.PlayOneShot(FMODEventsManager.Instance.TouristScared, transform.position);
             }
         }
 

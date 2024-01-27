@@ -15,11 +15,14 @@ public class SpinTongue : MonoBehaviour
 
     // The UI will probably need this guy, he starts at zero and goes up to whatever _coolDownTime is
     internal float CoolDownTime = 0;
-
     private bool _cooledDown = true;
     private Coroutine _hoverCoroutine;
 
+    private ScoreManager _score => FindObjectOfType<ScoreManager>();
+
+    //Audio
     private EventInstance _helicopterEventInstance;
+    private bool _haveTouristsCheered;
 
     private void Start()
     {
@@ -60,6 +63,14 @@ public class SpinTongue : MonoBehaviour
             // OR THE AUDIO CAN GO HERE FOR THE HELICOPTER IF IT'S A ONE FIRE
             _head.AddForce(Vector2.up * _hoverCurve.Evaluate(timeElapse) * 200000 * Time.deltaTime);
             timeElapse += Time.deltaTime;
+            if(!_haveTouristsCheered) 
+            {
+                for (int i = 0; i < _score.PeopleCount; i++)
+                { 
+                    AudioManager.Instance.PlayOneShot(FMODEventsManager.Instance.TouristAmazed, this.transform.position);
+                }
+                _haveTouristsCheered = true;
+            }
         }
         StopSpinning();
     }
@@ -67,13 +78,19 @@ public class SpinTongue : MonoBehaviour
     internal void StopSpinning()
     {
         _helicopterEventInstance.setParameterByName("HellicopterOff", 1);
-
+        _haveTouristsCheered = false;
         //Stop playing the animation/Turn off the motor
         for (int i = 0; i < transform.childCount; i++)
         {
             transform.GetChild(i).TryGetComponent(out HingeJoint2D hinge);
             if (hinge) hinge.useMotor = false;
         }
+
+        for (int i = 0; i < _score.PeopleCount; i++)
+        {
+            AudioManager.Instance.PlayOneShot(FMODEventsManager.Instance.TouristScared, this.transform.position);
+        }
+
         StopCoroutine(_hoverCoroutine);
     }
     internal void Recharge()
