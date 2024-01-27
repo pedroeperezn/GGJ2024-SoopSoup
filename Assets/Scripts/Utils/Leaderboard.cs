@@ -22,14 +22,38 @@ public class Leaderboard : MonoBehaviour
     public async Task<LeaderBoardPlace[]> GetScores(string leaderBoardId, int limit = 10)
     {
         // returns that yucky json we are too familiar with
-        var scoresResponse = await LeaderboardsService.Instance.GetPlayerRangeAsync(leaderBoardId, new GetPlayerRangeOptions 
+        var scoresResponse = await LeaderboardsService.Instance.GetScoresAsync(leaderBoardId, new GetScoresOptions 
+        {
+            Limit = limit
+        });
+
+        // create output by converting yucky JSON into our nice leaderboardplace
+        LeaderBoardPlace[] output = new LeaderBoardPlace[scoresResponse.Results.Count];
+        for(int i = 0; i < scoresResponse.Results.Count; ++i)
+        {
+            output[i].Name = scoresResponse.Results[i].PlayerName;
+            output[i].Rank = scoresResponse.Results[i].Rank;
+            output[i].Score = (int)scoresResponse.Results[i].Score;
+        }
+        return output;
+    }
+
+    /// <summary>
+    /// gets the score
+    /// </summary>
+    /// <param name="limit"></param>
+    /// <returns></returns>
+    public async Task<LeaderBoardPlace[]> GetScoresCloseToPlayer(string leaderBoardId, int limit = 10)
+    {
+        // returns that yucky json we are too familiar with
+        var scoresResponse = await LeaderboardsService.Instance.GetPlayerRangeAsync(leaderBoardId, new GetPlayerRangeOptions
         {
             RangeLimit = limit
         });
 
         // create output by converting yucky JSON into our nice leaderboardplace
         LeaderBoardPlace[] output = new LeaderBoardPlace[scoresResponse.Results.Count];
-        for(int i = 0; i < scoresResponse.Results.Count; ++i)
+        for (int i = 0; i < scoresResponse.Results.Count; ++i)
         {
             output[i].Name = scoresResponse.Results[i].PlayerName;
             output[i].Rank = scoresResponse.Results[i].Rank;
