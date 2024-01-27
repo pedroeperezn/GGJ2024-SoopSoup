@@ -48,14 +48,18 @@ public class PlayMusic : MonoBehaviour
 
     public void ChangeLevelMusic(int NewLevel)
     {
-        StopMusic();
+        //StopMusic();
+        Debug.Log("Trigger Exit");
         musicInstance.setParameterByName("CurrentLevel", NewLevel);
+        musicInstance.setParameterByName("Continue", 1);
+        musicInstance.setParameterByName("LevelFinished", 0);
     }
 
     public void LevelCompleteMusic() 
     {
-        musicInstance.setParameterByName("Continue", 0);
+        
         musicInstance.setParameterByName("LevelFinished", 1);
+        musicInstance.setParameterByName("Continue", 0);
     }
 
     private void OnDestroy()
