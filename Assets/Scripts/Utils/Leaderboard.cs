@@ -1,16 +1,8 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Threading.Tasks;
-using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 using Unity.Services.Core;
-using Unity.Services.Authentication;
 using Unity.Services.Leaderboards;
-using Newtonsoft.Json;
-using UnityEngine.SocialPlatforms.Impl;
-using UnityEngine.SocialPlatforms;
 
 public class Leaderboard : MonoBehaviour
 {
@@ -22,12 +14,20 @@ public class Leaderboard : MonoBehaviour
         _authorize.AuthorizeAnonymousUserAsync();
     }
 
-    [ContextMenu("Get Scores")]
-    public async Task<LeaderBoardPlace[]> GetScores()
+    /// <summary>
+    /// gets the score
+    /// </summary>
+    /// <param name="limit"></param>
+    /// <returns></returns>
+    public async Task<LeaderBoardPlace[]> GetScores(string leaderBoardId, int limit = 10)
     {
-        var scoresResponse = await LeaderboardsService.Instance.GetScoresAsync(LeaderBoardIds.LeaderBoards[3]);
-        Debug.Log(JsonConvert.SerializeObject(scoresResponse));
-        Debug.Log(scoresResponse.Results[0].Score);
+        // returns that yucky json we are too familiar with
+        var scoresResponse = await LeaderboardsService.Instance.GetPlayerRangeAsync(leaderBoardId, new GetPlayerRangeOptions 
+        {
+            RangeLimit = limit
+        });
+
+        // create output by converting yucky JSON into our nice leaderboardplace
         LeaderBoardPlace[] output = new LeaderBoardPlace[scoresResponse.Results.Count];
         for(int i = 0; i < scoresResponse.Results.Count; ++i)
         {
@@ -38,17 +38,25 @@ public class Leaderboard : MonoBehaviour
         return output;
     }
 
-    public async void PostScores(string leaderboardId, string playerName, int score)
+    public async Task<LeaderBoardPlace> PostScores(string leaderboardId, string playerName, int score)
     {
+        LeaderBoardPlace output;
         try
         {
             await _authorize.SetPlayerName(playerName);
-            await LeaderboardsService.Instance.AddPlayerScoreAsync(leaderboardId, score);
+            var result = await LeaderboardsService.Instance.AddPlayerScoreAsync(leaderboardId, score);
+
+            output.Name = result.PlayerName;
+            output.Rank = result.Rank;
+            output.Score = (int)result.Score;
+
             Debug.Log($"Posted {score} to {leaderboardId}");
+            return output;
         }
         catch (Exception e)
         {
             Debug.LogError(e);
         }
+        throw new Exception("Failed to post");
     }
 }

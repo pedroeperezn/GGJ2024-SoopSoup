@@ -4,8 +4,9 @@ using UnityEngine;
 
 public static class LeaderBoardIds
 {
-    public static string[] LeaderBoards = new string[4] 
+    public static string[] LeaderBoards = new string[5] 
     {
+        "Total_Score",
         "Level_1",
         "Level_2",
         "Level_3",
