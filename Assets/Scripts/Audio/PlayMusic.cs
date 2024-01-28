@@ -11,6 +11,7 @@ public class PlayMusic : MonoBehaviour
     [SerializeField] private bool _isMainMenu;
 
     private EventInstance MusicInstance;
+    private int _currentLevel;
 
     private void Awake()
     {
@@ -67,12 +68,10 @@ public class PlayMusic : MonoBehaviour
     {
         MusicInstance.start();
     }
-
-    public void ChangeLevelMusic(int NewLevel)
+    
+    public void PlayLevelMusic()
     {
-        //StopMusic();
-        Debug.Log("Trigger Exit");
-        MusicInstance.setParameterByName("CurrentLevel", NewLevel);
+        MusicInstance.setParameterByName("CurrentLevel", _currentLevel);
         MusicInstance.setParameterByName("Continue", 1);
         MusicInstance.setParameterByName("LevelFinished", 0);
     }
@@ -87,6 +86,11 @@ public class PlayMusic : MonoBehaviour
     private void OnDestroy()
     {
         MusicInstance.stop(STOP_MODE.ALLOWFADEOUT);
+    }
+
+    public void SetCurrentMusicLevel(int newLevel) 
+    {
+        _currentLevel = newLevel;
     }
 
 }

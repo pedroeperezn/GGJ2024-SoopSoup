@@ -3,12 +3,14 @@ using FMOD.Studio;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class AudioManager : MonoBehaviour
 {
     private List<EventInstance> eventInstances;
     private List<StudioEventEmitter> eventEmiters;
     private EventInstance ambienceEventInstance;
+    private bool _isMuted;
 
    public static AudioManager Instance { get; private set; }
 
@@ -79,6 +81,12 @@ public class AudioManager : MonoBehaviour
                 emitter.Stop();
             }
         }
+    }
+
+    public void ToggleMuteSound() 
+    {
+        _isMuted = !_isMuted;
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("IsMuted", Convert.ToInt32(_isMuted));
     }
 
 
