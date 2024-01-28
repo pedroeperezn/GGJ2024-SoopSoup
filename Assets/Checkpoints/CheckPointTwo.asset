@@ -10,9 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf2c214902084b24aa2fc7f56d51a104, type: 3}
-  m_Name: CheckPointOne
+  m_Name: CheckPointTwo
   m_EditorClassIdentifier: 
   _tourists:
   - {fileID: 6865130032908763995, guid: 826d724f8fddd7b49b759ae46b2815da, type: 3}
-  _expectedCompletionTime: 30
-  _levelComplete: {fileID: 0}

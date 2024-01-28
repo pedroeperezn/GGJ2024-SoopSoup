@@ -18,9 +18,9 @@ public class CloudWiggle : MonoBehaviour
 
     IEnumerator Wiggle(Transform childTransform)
     {
-        yield return new WaitForSeconds(Random.Range(0, 2));
-        float index = 0;
-        bool goLeft = true;
+        yield return new WaitForSeconds(Random.Range(0f, 5f));
+        float index = Random.Range(_curve.keys[_curve.length - 1].time, _curve.keys[0].time);
+        bool goLeft = false;
         while (true)
         {
             yield return null;
