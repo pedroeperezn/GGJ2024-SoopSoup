@@ -8,6 +8,7 @@ public class Checkpoint : ScriptableObject
 {
     [SerializeField] private GameObject[] _tourists;
     [SerializeField] private float _expectedCompletionTime = 10;
+    [SerializeField] private RectTransform _levelComplete;
 
     // Music Change can go here or Pedro can use the event itself
     public void ChangeMusic()
@@ -25,9 +26,16 @@ public class Checkpoint : ScriptableObject
     }
 
     // Micy deez might want to use this, or she can just use the event by itself
-    public void PopUpUI()
+    public void PopUpUI(bool gameDone)
     {
         Debug.Log("Popped up UI");
+
+        LevelCompleteHandler lvlCompleteUI = FindAnyObjectByType<LevelCompleteHandler>();
+
+        if(gameDone)
+            lvlCompleteUI.EndGame();
+        else
+            lvlCompleteUI.CheckpointReached();
     }
 
     public void GenerateScore()
