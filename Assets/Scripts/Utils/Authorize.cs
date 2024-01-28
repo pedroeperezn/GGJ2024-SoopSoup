@@ -14,7 +14,7 @@ public class Authorize
     public string GetCurrentPlayerName()
     {
         string name = AuthenticationService.Instance.PlayerName;
-        if (string.IsNullOrEmpty(name)) return "undefined";
+        if (string.IsNullOrEmpty(name)) return "userName";
         return TruncatePlayerName(name, '#');
     }
 
