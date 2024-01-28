@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SpinTongue : MonoBehaviour
 {
@@ -13,8 +14,14 @@ public class SpinTongue : MonoBehaviour
     [SerializeField] private float _maxSpinTime = 10;
     [SerializeField] private float _coolDownTime = 3;
 
+    [HideInInspector] public UnityEvent StartRecharge = new UnityEvent();
+    [HideInInspector] public UnityEvent StartHover = new UnityEvent();
+
     // The UI will probably need this guy, he starts at zero and goes up to whatever _coolDownTime is
-    internal float CoolDownTime = 0;
+    internal float CurrentTime = 0;
+    internal float CoolDownTime => _coolDownTime;
+    internal float MaxSpinTime => _maxSpinTime;
+
     private bool _cooledDown = true;
     private Coroutine _hoverCoroutine;
 
@@ -46,6 +53,8 @@ public class SpinTongue : MonoBehaviour
             transform.GetChild(i).TryGetComponent(out HingeJoint2D hinge);
             if (hinge) hinge.useMotor = true;
         }
+
+        StartHover.Invoke();
         _hoverCoroutine = StartCoroutine(Hover());
     }
 
@@ -56,13 +65,13 @@ public class SpinTongue : MonoBehaviour
         _helicopterEventInstance.start();
         _body.IsFlying = true;
         _cooledDown = false;
-        float timeElapse = 0;
-        while(timeElapse < _maxSpinTime)
+        CurrentTime = 0;
+        while(CurrentTime < _maxSpinTime)
         {
             yield return null;
             // OR THE AUDIO CAN GO HERE FOR THE HELICOPTER IF IT'S A ONE FIRE
-            _head.AddForce(Vector2.up * _hoverCurve.Evaluate(timeElapse) * 200000 * Time.deltaTime);
-            timeElapse += Time.deltaTime;
+            _head.AddForce(Vector2.up * _hoverCurve.Evaluate(CurrentTime) * 200000 * Time.deltaTime);
+            CurrentTime += Time.deltaTime;
             if(!_haveTouristsCheered) 
             {
                 for (int i = 0; i < _score.PeopleCount; i++)
@@ -73,6 +82,7 @@ public class SpinTongue : MonoBehaviour
             }
         }
         StopSpinning();
+        Recharge();
     }
 
     internal void StopSpinning()
@@ -95,19 +105,21 @@ public class SpinTongue : MonoBehaviour
     }
     internal void Recharge()
     {
+        if (!_body.IsFlying) return;
         //Start a timer to reset the cooldown
         _body.IsFlying = false;
         StartCoroutine(CoolDown());
+        StartRecharge.Invoke();
     }
 
     private IEnumerator CoolDown()
     {
         // This guy might need to remove depending on how the UI works
-        CoolDownTime = 0;
-        while (CoolDownTime < _coolDownTime)
+        CurrentTime = 0;
+        while (CurrentTime < _coolDownTime)
         {
             yield return null;
-            CoolDownTime += Time.deltaTime;
+            CurrentTime += Time.deltaTime;
         }
         _cooledDown = true;
     }
