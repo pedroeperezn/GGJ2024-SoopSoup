@@ -18,6 +18,8 @@ public class ScoreManager : MonoBehaviour
 
     private int _score;
 
+    public float TimeTaken => _timeTaken;
+
     private void Awake()
     {
         StartCoroutine(CountTime());
