@@ -21,7 +21,7 @@ public class StaticTourist : MonoBehaviour, ICollisionCallback
     }
     public void CollisionHandler(Collision2D collisionInfo)
     {
-        if (collisionInfo.gameObject.CompareTag("Llama") || collisionInfo.gameObject.layer == LayerMask.NameToLayer("Spit"))
+        if (collisionInfo.gameObject.layer == LayerMask.NameToLayer("Llama") || collisionInfo.gameObject.layer == LayerMask.NameToLayer("Spit"))
         {
             //Ouch Audio would go here
             if (collisionInfo.gameObject.layer == LayerMask.NameToLayer("Spit"))
