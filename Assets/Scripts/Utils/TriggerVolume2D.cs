@@ -12,7 +12,7 @@ public class TriggerVolume2D : MonoBehaviour
 {
     [SerializeField] private string _tagFilter = "Player";
     [SerializeField] private bool _doOnce = true;
-    [field: SerializeField] public bool Done { get; set; }
+    public bool EnterDone, ExitDone;
 
     public UnityEvent<GameObject> OnEnter;
     public UnityEvent<GameObject> OnExit;
@@ -29,19 +29,19 @@ public class TriggerVolume2D : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (CheckForTagMatch(other.gameObject) && (!_doOnce || !Done))
+        if (CheckForTagMatch(other.gameObject) && (!_doOnce || !EnterDone))
         {
             OnEnter.Invoke(other.gameObject);
-            Done = true;
+            EnterDone = true;
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (CheckForTagMatch(other.gameObject) && (!_doOnce || !Done))
+        if (CheckForTagMatch(other.gameObject) && (!_doOnce || !ExitDone))
         {
             OnExit.Invoke(other.gameObject);
-            Done = true;
+            ExitDone = true;
         }
     }
 
