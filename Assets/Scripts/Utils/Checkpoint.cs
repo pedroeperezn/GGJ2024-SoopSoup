@@ -44,5 +44,6 @@ public class Checkpoint : ScriptableObject
         score.CalculateTimeBonus(_expectedCompletionTime);
         score.CalculateChaosBonus();
         score.CalculatePeopleBonus();
+        Debug.Log(score.Score);
     }
 }
