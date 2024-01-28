@@ -5,23 +5,18 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "ScriptableObjects/Checkpoints/Win")]
 public class WinBox : ScriptableObject
 {
-    public void PopUpUI()
-    {
-        // Micy deez might want to use this to pop up win ui
-    }
-
-    public void FreezeTime()
-    {
-        Time.timeScale = 0;
-    }
-
     public void PlayWinSFX()
     {
         // Pedro might use this to play an audio cue
     }
 
-    public void PostToLeaderboard()
+    public async void PostToLeaderboard()
     {
         // this guy will post the players score to the leaderboard
+        Leaderboard leaderboard = FindObjectOfType<Leaderboard>();
+        ScoreManager scoreManager = FindAnyObjectByType<ScoreManager>();
+        Authorize _autho = new Authorize();
+
+        await leaderboard.PostScores(LeaderBoardIds.LeaderBoards[0], _autho.GetCurrentPlayerName(), scoreManager.Score);
     }
 }
