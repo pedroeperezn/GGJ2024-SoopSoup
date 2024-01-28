@@ -10,8 +10,8 @@ public class TimeUIHandler : MonoBehaviour
 
     private void Update()
     {
-        int minutes = Mathf.RoundToInt(_scoreManager.TimeTaken / 60);
-        int seconds = Mathf.RoundToInt(_scoreManager.TimeTaken) - (minutes * 60);
+        int minutes = (int)(_scoreManager.TimeTaken / 60);
+        int seconds = (int)(_scoreManager.TimeTaken % 60);
         _time.text = $"{minutes}:{seconds}";
     }
 }

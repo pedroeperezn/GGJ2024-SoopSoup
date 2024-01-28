@@ -1330,7 +1330,7 @@ MonoBehaviour:
   m_Elasticity: 0
   m_Inertia: 1
   m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 160.88
+  m_ScrollSensitivity: 160
   m_Viewport: {fileID: 3915157681050400031}
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 1269504087280267081}
@@ -2219,6 +2219,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3978744510792541965}
     m_Modifications:
+    - target: {fileID: 4237449025564982761, guid: 43b75ee201f842843bf7d838d55e84e8,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.000030517578
+      objectReference: {fileID: 0}
     - target: {fileID: 5006857171181421174, guid: 43b75ee201f842843bf7d838d55e84e8,
         type: 3}
       propertyPath: m_Pivot.x
@@ -2329,6 +2334,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7551682201735934685, guid: 43b75ee201f842843bf7d838d55e84e8,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7728738874203857795, guid: 43b75ee201f842843bf7d838d55e84e8,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -2348,6 +2358,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Screen_Leaderboard
+      objectReference: {fileID: 0}
+    - target: {fileID: 7888872211726920413, guid: 43b75ee201f842843bf7d838d55e84e8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9188481817090554107, guid: 43b75ee201f842843bf7d838d55e84e8,
         type: 3}
