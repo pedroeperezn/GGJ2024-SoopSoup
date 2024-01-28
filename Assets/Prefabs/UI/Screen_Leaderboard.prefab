@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 1
+  m_ScrollSensitivity: 160
   m_Viewport: {fileID: 7728738874203857795}
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 3238266515548659645}
@@ -602,10 +602,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 5006857171181421174}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1300, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4245103767440185304
 CanvasRenderer:
@@ -749,8 +749,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4296840539905991151}
   - {fileID: 4461307934872958090}
+  - {fileID: 4296840539905991151}
   - {fileID: 444110722089438905}
   - {fileID: 589817660257645134}
   - {fileID: 1244760519786701754}
