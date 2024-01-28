@@ -7,8 +7,9 @@ public class FMODEventsManager : MonoBehaviour
 {
     public static FMODEventsManager Instance { get; private set; }
 
-    [field: Header("Game Music")]
-    [field: SerializeField] public EventReference Music { get; private set; }
+    [field: Header("Music")]
+    [field: SerializeField] public EventReference GameMusic { get; private set; }
+    [field: SerializeField] public EventReference MainMenuMusic { get; private set; }
 
 
     [field: Header("Llama SFX")]
@@ -31,6 +32,10 @@ public class FMODEventsManager : MonoBehaviour
 
     [field: Header("Ambience")]
     [field: SerializeField] public EventReference Ambience { get; private set; }
+    
+    [field: Header("UI")]
+    [field: SerializeField] public EventReference OnHoverButton { get; private set; }
+    [field: SerializeField] public EventReference OnClickButton { get; private set; }
 
     private void Awake()
     {

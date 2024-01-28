@@ -32,6 +32,7 @@ Transform:
   m_Children:
   - {fileID: 1293348547004487458}
   - {fileID: 7567235451385042711}
+  - {fileID: 5890390949093766687}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2786402424564795691
@@ -90,6 +91,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b47bb7fae6bca044bbd353c4d2addaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isMainMenu: 1
+--- !u!1 &5090816295885861924
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5890390949093766687}
+  m_Layer: 0
+  m_Name: PlayUIOneShots
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5890390949093766687
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5090816295885861924}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2522151285274348265}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6737855755626786951
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,13 +167,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88132397dd3397c4097c4808ff513450, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Music>k__BackingField:
+  <GameMusic>k__BackingField:
     Guid:
       Data1: 1805091798
       Data2: 1269328754
       Data3: -684005190
       Data4: 1353997485
     Path: event:/Music/GameMusic
+  <MainMenuMusic>k__BackingField:
+    Guid:
+      Data1: -1204265854
+      Data2: 1117118970
+      Data3: -56622448
+      Data4: -788205857
+    Path: event:/Music/MenuMusic
   <LlamaInPainReac>k__BackingField:
     Guid:
       Data1: -506422006
@@ -232,3 +272,17 @@ MonoBehaviour:
       Data3: 768021634
       Data4: 1112996713
     Path: event:/Ambience/MachuPichuBackground
+  <OnHoverButton>k__BackingField:
+    Guid:
+      Data1: 504254595
+      Data2: 1112719755
+      Data3: -290176618
+      Data4: 1476936094
+    Path: event:/UI/UIOnHover
+  <OnClickButton>k__BackingField:
+    Guid:
+      Data1: 1445535395
+      Data2: 1188435379
+      Data3: -639406689
+      Data4: -1318580149
+    Path: event:/UI/UIOnPress

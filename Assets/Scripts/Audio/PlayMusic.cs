@@ -7,7 +7,10 @@ using UnityEngine;
 public class PlayMusic : MonoBehaviour
 {
     public static PlayMusic Instance;
-    private EventInstance musicInstance;
+
+    [SerializeField] private bool _isMainMenu;
+
+    private EventInstance MusicInstance;
 
     private void Awake()
     {
@@ -21,50 +24,69 @@ public class PlayMusic : MonoBehaviour
 
     private void Start()
     {
-        musicInstance = AudioManager.Instance.CreateInstance(FMODEventsManager.Instance.Music);
-        PLAYBACK_STATE playbackState;
-        musicInstance.getPlaybackState(out playbackState);
-
-        if (playbackState.Equals(PLAYBACK_STATE.STOPPED))
+        if (!_isMainMenu)
         {
-            StartMusic();
-        }
+            MusicInstance = AudioManager.Instance.CreateInstance(FMODEventsManager.Instance.GameMusic);
+            PLAYBACK_STATE playbackState;
+            MusicInstance.getPlaybackState(out playbackState);
 
+            if (playbackState.Equals(PLAYBACK_STATE.STOPPED))
+            {
+                StartMusic();
+            }
+
+            else
+            {
+                MusicInstance.stop(STOP_MODE.ALLOWFADEOUT);
+            }
+        }
         else 
         {
-            musicInstance.stop(STOP_MODE.ALLOWFADEOUT);
+            MusicInstance = AudioManager.Instance.CreateInstance(FMODEventsManager.Instance.MainMenuMusic);
+            PLAYBACK_STATE playbackState;
+            MusicInstance.getPlaybackState(out playbackState);
+
+            if (playbackState.Equals(PLAYBACK_STATE.STOPPED))
+            {
+                StartMusic();
+            }
+
+            else
+            {
+                MusicInstance.stop(STOP_MODE.ALLOWFADEOUT);
+            }
         }
     }
 
     private void StopMusic() 
     {
-        musicInstance.stop(STOP_MODE.ALLOWFADEOUT);
+        MusicInstance.stop(STOP_MODE.ALLOWFADEOUT);
     }
 
     private void StartMusic() 
     {
-        musicInstance.start();
+        MusicInstance.start();
     }
 
     public void ChangeLevelMusic(int NewLevel)
     {
         //StopMusic();
         Debug.Log("Trigger Exit");
-        musicInstance.setParameterByName("CurrentLevel", NewLevel);
-        musicInstance.setParameterByName("Continue", 1);
-        musicInstance.setParameterByName("LevelFinished", 0);
+        MusicInstance.setParameterByName("CurrentLevel", NewLevel);
+        MusicInstance.setParameterByName("Continue", 1);
+        MusicInstance.setParameterByName("LevelFinished", 0);
     }
 
     public void LevelCompleteMusic() 
     {
         
-        musicInstance.setParameterByName("LevelFinished", 1);
-        musicInstance.setParameterByName("Continue", 0);
+        MusicInstance.setParameterByName("LevelFinished", 1);
+        MusicInstance.setParameterByName("Continue", 0);
     }
 
     private void OnDestroy()
     {
-        musicInstance.stop(STOP_MODE.ALLOWFADEOUT);
+        MusicInstance.stop(STOP_MODE.ALLOWFADEOUT);
     }
 
 }
