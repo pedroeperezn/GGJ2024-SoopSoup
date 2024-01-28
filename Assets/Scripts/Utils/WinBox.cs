@@ -17,6 +17,6 @@ public class WinBox : ScriptableObject
         ScoreManager scoreManager = FindAnyObjectByType<ScoreManager>();
         Authorize _autho = new Authorize();
 
-        await leaderboard.PostScores(LeaderBoardIds.LeaderBoards[3], _autho.GetCurrentPlayerName(), scoreManager.Score);
+        await leaderboard.PostScores(LeaderBoardIds.LeaderBoards[0], _autho.GetCurrentPlayerName(), scoreManager.Score);
     }
 }

@@ -20,7 +20,7 @@ public class AddToLeaderboard : MonoBehaviour
         int limit = _limit;
 
         // make an instance of the leaderboard and display the contents, limit 20
-        LeaderBoardPlace[] leaderboardData = await leaderboard.GetScores(LeaderBoardIds.LeaderBoards[4]);
+        LeaderBoardPlace[] leaderboardData = await leaderboard.GetScores(LeaderBoardIds.LeaderBoards[0]);
         UpdateLeaderboardUI(leaderboardData);
     }
 
